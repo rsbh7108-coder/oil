@@ -1111,7 +1111,7 @@
         <a href="#event-explain">事件說明</a>
         <a href="#rule">退換貨原則</a>
         <a href="#search">整合搜尋</a>
-        <a href="#product-list">232項產品</a>
+        <a href="#product-list">預防性下架產品</a>
         <a href="#schools">影響學校</a>
         <a href="#refund">退換貨方式</a>
         <a href="#downstream">下游業者</a>
@@ -1144,9 +1144,9 @@
             <span class="tag tag-red">更新時間 115.07.06</span>
           </div>
           <div class="status-card stat-card">
-            <strong>影響產品</strong>
-            <div class="big">232</div>
-            <span class="tag tag-blue">更新時間 115.07.07</span>
+            <strong>預防性下架產品</strong>
+            <div class="big">401</div>
+            <span class="tag tag-blue">更新時間 115.07.08</span>
           </div>
           <div class="status-card stat-card">
             <strong>下游業者</strong>
@@ -1244,7 +1244,7 @@
 
         <div class="search-box">
           <div class="search-row">
-            <input id="searchInput" type="search" placeholder="請輸入批號、品名、產品、業者、縣市或學校，例如：315-1150404、泰山、飯糰、臺中市、台中一中" />
+            <input id="searchInput" type="search" placeholder="請輸入批號、品名、產品、有效日期、業者、縣市或學校，例如：315-1150404、泰山、飯糰、臺中市、台中一中" />
             <button class="btn btn-accent" id="clearBtn" type="button">清除搜尋</button>
           </div>
           <div class="results-count" id="resultCount"></div>
@@ -1273,8 +1273,8 @@
     <section id="product-list">
       <div class="container">
         <div class="section-head">
-          <h2>影響產品清冊 232 項</h2>
-          <p>此區放在問題油品品項與批號搜尋下方，作為第二層產品資訊整理。可依縣市查看，不影響上方批號搜尋功能。</p>
+          <h2>預防性下架產品清冊 401項</h2>
+          <p>此區放在問題油品品項與批號搜尋下方，作為預防性下架產品資訊整理。可依縣市查看，並已新增有效日期欄位。</p>
         </div>
 
         <div class="product-list-box">
@@ -1295,6 +1295,7 @@
                   <th>業者</th>
                   <th>產品序號</th>
                   <th>產品名稱</th>
+                  <th>有效日期</th>
                 </tr>
               </thead>
               <tbody id="productTableBody"></tbody>
@@ -1302,7 +1303,7 @@
           </div>
 
           <div class="product-list-note">
-            來源：232項產品清單 115.7.7。此清冊為產品資訊整理，正式公告與後續異動仍請以官方資料為準。
+            來源：預防性下架產品清單 115.7.7。此清冊為產品資訊整理，正式公告與後續異動仍請以官方資料為準。
           </div>
         </div>
       </div>
@@ -6581,7 +6582,7 @@
 ];
 
     // ============================================================
-    //  5. 232項產品清冊：依縣市查看
+    //  5. 預防性下架產品清冊：依縣市查看
     // ============================================================
     const productList232 = [
       {
@@ -6589,1624 +6590,3208 @@
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "1",
-            "productName": "雙蔬鮪魚飯糰"
+            "productName": "雙蔬鮪魚飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "2",
-            "productName": "林聰明-雞肉飯飯糰"
+            "productName": "林聰明-雞肉飯飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "3",
-            "productName": "櫸木燻雞飯糰"
+            "productName": "櫸木燻雞飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "4",
-            "productName": "炭火燒肉飯糰"
+            "productName": "炭火燒肉飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "5",
-            "productName": "韓式燒肉泡菜飯糰"
+            "productName": "韓式燒肉泡菜飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "6",
-            "productName": "炙烤鹽蔥燒肉飯糰"
+            "productName": "炙烤鹽蔥燒肉飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "7",
-            "productName": "宗家府泡菜燒肉飯糰"
+            "productName": "宗家府泡菜燒肉飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "8",
-            "productName": "哇沙米秋鮭飯糰"
+            "productName": "哇沙米秋鮭飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "9",
-            "productName": "新極上飯糰-XO醬珠貝"
+            "productName": "新極上飯糰-XO醬珠貝",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "10",
-            "productName": "星級饗宴-晶英三杯蛤蠣飯糰"
+            "productName": "星級饗宴-晶英三杯蛤蠣飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "11",
-            "productName": "星級饗宴-米香鹹酥蝦飯糰"
+            "productName": "星級饗宴-米香鹹酥蝦飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "12",
-            "productName": "新極上飯糰-熟成明太子鮭魚"
+            "productName": "新極上飯糰-熟成明太子鮭魚",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "13",
-            "productName": "(區)星宇新極上-胡同炭火牛小排"
+            "productName": "(區)星宇新極上-胡同炭火牛小排",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "14",
-            "productName": "新極上飯糰-蔥鹽生鮭"
+            "productName": "新極上飯糰-蔥鹽生鮭",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "15",
-            "productName": "(金馬)雙蔬鮪魚飯糰"
+            "productName": "(金馬)雙蔬鮪魚飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "16",
-            "productName": "(金馬)林聰明-雞肉飯飯糰"
+            "productName": "(金馬)林聰明-雞肉飯飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "17",
-            "productName": "(金馬)櫸木燻雞飯糰"
+            "productName": "(金馬)櫸木燻雞飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "18",
-            "productName": "(金馬)炭火燒肉飯糰"
+            "productName": "(金馬)炭火燒肉飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "19",
-            "productName": "(金馬)炙烤鹽蔥燒肉飯糰"
+            "productName": "(金馬)炙烤鹽蔥燒肉飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "20",
-            "productName": "(金馬)宗家府泡菜燒肉飯糰"
+            "productName": "(金馬)宗家府泡菜燒肉飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "21",
-            "productName": "(金馬)哇沙米秋鮭飯糰"
+            "productName": "(金馬)哇沙米秋鮭飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "22",
-            "productName": "(金馬)晶英三杯蛤蠣飯糰"
+            "productName": "(金馬)晶英三杯蛤蠣飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "23",
-            "productName": "(金馬)星級饗宴-米香-鹹酥蝦飯糰"
+            "productName": "(金馬)星級饗宴-米香-鹹酥蝦飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "24",
-            "productName": "(金馬)新極上飯糰-熟成明太子鮭魚"
+            "productName": "(金馬)新極上飯糰-熟成明太子鮭魚",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "25",
-            "productName": "(金馬)新極上飯糰-蔥鹽生鮭"
+            "productName": "(金馬)新極上飯糰-蔥鹽生鮭",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "26",
-            "productName": "握便當-豪華秘製雙拼"
+            "productName": "握便當-豪華秘製雙拼",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "27",
-            "productName": "(金馬)握便當-豪華秘製雙拼"
+            "productName": "(金馬)握便當-豪華秘製雙拼",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "28",
-            "productName": "米香-麻油雞雙菇飯糰"
+            "productName": "米香-麻油雞雙菇飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "29",
-            "productName": "阜杭豆漿-經典飯糰"
+            "productName": "阜杭豆漿-經典飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "30",
-            "productName": "(金馬)阜杭豆漿-經典飯糰"
+            "productName": "(金馬)阜杭豆漿-經典飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "31",
-            "productName": "阜杭豆漿-里肌肉蛋紫米飯糰"
+            "productName": "阜杭豆漿-里肌肉蛋紫米飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "32",
-            "productName": "(金)阜杭豆漿-里肌肉蛋紫米飯糰"
+            "productName": "(金)阜杭豆漿-里肌肉蛋紫米飯糰",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "33",
-            "productName": "晶華-四起司香草烤雞握便當"
+            "productName": "晶華-四起司香草烤雞握便當",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "34",
-            "productName": "(金馬)晶華四起司香草烤雞握便當"
+            "productName": "(金馬)晶華四起司香草烤雞握便當",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "35",
-            "productName": "炙燒明太子鮭魚飯糰(圓)"
+            "productName": "炙燒明太子鮭魚飯糰(圓)",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "36",
-            "productName": "歐姆蛋包飯飯糰(圓)"
+            "productName": "歐姆蛋包飯飯糰(圓)",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "37",
-            "productName": "(金)歐姆蛋包飯飯糰(圓)"
+            "productName": "(金)歐姆蛋包飯飯糰(圓)",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "38",
-            "productName": "石安牧場溏心蛋飯糰(圓)"
+            "productName": "石安牧場溏心蛋飯糰(圓)",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "39",
-            "productName": "(金馬)石安牧場溏心蛋飯糰(圓)"
+            "productName": "(金馬)石安牧場溏心蛋飯糰(圓)",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "40",
-            "productName": "鮪魚肉鬆雙手卷"
+            "productName": "鮪魚肉鬆雙手卷",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "41",
-            "productName": "(金馬)鮪魚肉鬆雙手卷"
+            "productName": "(金馬)鮪魚肉鬆雙手卷",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "42",
-            "productName": "晶英-南蠻炸雞雙享壽司"
+            "productName": "晶英-南蠻炸雞雙享壽司",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "43",
-            "productName": "(金馬)晶英-南蠻炸雞雙享壽司"
+            "productName": "(金馬)晶英-南蠻炸雞雙享壽司",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "44",
-            "productName": "生鮭夾心壽司"
+            "productName": "生鮭夾心壽司",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "45",
-            "productName": "(金馬)生鮭夾心壽司"
+            "productName": "(金馬)生鮭夾心壽司",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "46",
-            "productName": "阿拉斯加秋鮭鮪魚雙手卷"
+            "productName": "阿拉斯加秋鮭鮪魚雙手卷",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "47",
-            "productName": "(金馬)阿拉斯加秋鮭鮪魚雙手卷"
+            "productName": "(金馬)阿拉斯加秋鮭鮪魚雙手卷",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "48",
-            "productName": "醬燒烤雞溏心蛋三明治"
+            "productName": "醬燒烤雞溏心蛋三明治",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "49",
-            "productName": "溏心蛋紐奧良風味烤雞三明治"
+            "productName": "溏心蛋紐奧良風味烤雞三明治",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "50",
-            "productName": "燻雞菇菇彩蔬三明治"
+            "productName": "燻雞菇菇彩蔬三明治",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "51",
-            "productName": "吉士豬肉堡加蛋"
+            "productName": "吉士豬肉堡加蛋",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "52",
-            "productName": "花生熔岩辣雞腿堡"
+            "productName": "花生熔岩辣雞腿堡",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "53",
-            "productName": "牛肉起司堡"
+            "productName": "牛肉起司堡",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "54",
-            "productName": "塔塔香炸鱈魚堡"
+            "productName": "塔塔香炸鱈魚堡",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "55",
-            "productName": "四起司燻腸捲餅"
+            "productName": "四起司燻腸捲餅",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "56",
-            "productName": "香腸嘎香菜風味捲餅"
+            "productName": "香腸嘎香菜風味捲餅",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "57",
-            "productName": "鮪魚雞蛋蔬菜捲餅"
+            "productName": "鮪魚雞蛋蔬菜捲餅",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "58",
-            "productName": "牛角-炙燒雙拼便當"
+            "productName": "牛角-炙燒雙拼便當",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "59",
-            "productName": "(離)牛角-炙燒雙拼便當"
+            "productName": "(離)牛角-炙燒雙拼便當",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "60",
-            "productName": "豆酥烤魚鮮蔬餐盒"
+            "productName": "豆酥烤魚鮮蔬餐盒",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "61",
-            "productName": "(離)豆酥烤魚鮮蔬餐盒"
+            "productName": "(離)豆酥烤魚鮮蔬餐盒",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "62",
-            "productName": "極饗-奮起湖秘製滷排"
+            "productName": "極饗-奮起湖秘製滷排",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "63",
-            "productName": "(離)極饗-奮起湖秘製滷排"
+            "productName": "(離)極饗-奮起湖秘製滷排",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "64",
-            "productName": "晶華-府城肉燥厚切排骨飯"
+            "productName": "晶華-府城肉燥厚切排骨飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "65",
-            "productName": "(離)晶華-府城肉燥厚切排骨飯"
+            "productName": "(離)晶華-府城肉燥厚切排骨飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "66",
-            "productName": "日式佛蒙特咖哩雞肉飯"
+            "productName": "日式佛蒙特咖哩雞肉飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "67",
-            "productName": "(離)日式佛蒙特咖哩雞肉飯"
+            "productName": "(離)日式佛蒙特咖哩雞肉飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "68",
-            "productName": "韓式漢堡排粉紅醬燉飯(含牛)"
+            "productName": "韓式漢堡排粉紅醬燉飯(含牛)",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "69",
-            "productName": "富錦樹-剝皮辣蝦滑蛋燴飯"
+            "productName": "富錦樹-剝皮辣蝦滑蛋燴飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "70",
-            "productName": "歐姆蛋包飯"
+            "productName": "歐姆蛋包飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "71",
-            "productName": "晶華-香烤魚排青醬燉飯"
+            "productName": "晶華-香烤魚排青醬燉飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "72",
-            "productName": "(離)晶華-香烤魚排青醬燉飯"
+            "productName": "(離)晶華-香烤魚排青醬燉飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "73",
-            "productName": "海鮮青醬焗飯"
+            "productName": "海鮮青醬焗飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "74",
-            "productName": "(離)海鮮青醬焗飯"
+            "productName": "(離)海鮮青醬焗飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "75",
-            "productName": "晶英-泡菜豬肉豆腐煲燴飯"
+            "productName": "晶英-泡菜豬肉豆腐煲燴飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "76",
-            "productName": "(離)晶英-泡菜豬肉豆腐煲燴飯"
+            "productName": "(離)晶英-泡菜豬肉豆腐煲燴飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "77",
-            "productName": "(蔬)經典獅子頭燴飯"
+            "productName": "(蔬)經典獅子頭燴飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "78",
-            "productName": "(離)(蔬)經典獅子頭燴飯"
+            "productName": "(離)(蔬)經典獅子頭燴飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "79",
-            "productName": "三起司肉醬焗飯"
+            "productName": "三起司肉醬焗飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "3",
             "city": "基隆市",
             "vendor": "聯華食品工業股份有限公司-基隆",
             "productNo": "80",
-            "productName": "(離)三起司肉醬焗飯"
+            "productName": "(離)三起司肉醬焗飯",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "11",
             "city": "臺北市",
             "vendor": "南僑油脂事業股份有限公司",
             "productNo": "81",
-            "productName": "南僑NEBOS機能性脂肪抹醬"
+            "productName": "南僑NEBOS機能性脂肪抹醬",
+            "expiry": "2026.10.6"
       },
       {
             "vendorNo": "11",
             "city": "臺北市",
             "vendor": "南僑油脂事業股份有限公司",
             "productNo": "82",
-            "productName": "王牌液態油炸專用油"
+            "productName": "王牌液態油炸專用油",
+            "expiry": "2027.5.28、2027.6.2、2027.6.4、2027.6.8"
       },
       {
             "vendorNo": "11",
             "city": "臺北市",
             "vendor": "南僑油脂事業股份有限公司",
             "productNo": "83",
-            "productName": "南僑烘焙潔淨升級油-無添加攪拌油"
+            "productName": "南僑烘焙潔淨升級油-無添加攪拌油",
+            "expiry": "2026.10.8"
       },
       {
             "vendorNo": "11",
             "city": "臺北市",
             "vendor": "南僑油脂事業股份有限公司",
             "productNo": "84",
-            "productName": "維佳無水烘焙油脂"
+            "productName": "維佳無水烘焙油脂",
+            "expiry": "2027.6.2"
       },
       {
             "vendorNo": "11",
             "city": "臺北市",
             "vendor": "南僑油脂事業股份有限公司",
             "productNo": "85",
-            "productName": "植物性起酥用油"
+            "productName": "植物性起酥用油",
+            "expiry": "2026.11.29"
       },
       {
             "vendorNo": "11",
             "city": "臺北市",
             "vendor": "南僑油脂事業股份有限公司",
             "productNo": "86",
-            "productName": "維佳特製丹麥專用油"
+            "productName": "維佳特製丹麥專用油",
+            "expiry": "2026.11.30"
       },
       {
             "vendorNo": "11",
             "city": "臺北市",
             "vendor": "南僑油脂事業股份有限公司",
             "productNo": "87",
-            "productName": "特製專用烘焙油脂"
+            "productName": "特製專用烘焙油脂",
+            "expiry": "2026.11.30"
       },
       {
-            "vendorNo": "28",
-            "city": "新北市",
-            "vendor": "享記食品有限公司",
+            "vendorNo": "13",
+            "city": "臺北市",
+            "vendor": "國防部福利事業管理處",
             "productNo": "88",
-            "productName": "大紅袍花椒油"
+            "productName": "營區團膳使用",
+            "expiry": "即食品(已過食用期限)"
       },
       {
-            "vendorNo": "28",
-            "city": "新北市",
-            "vendor": "享記食品有限公司",
+            "vendorNo": "16",
+            "city": "臺北市",
+            "vendor": "故宮晶華股份有限公司",
             "productNo": "89",
-            "productName": "麻辣紅油"
+            "productName": "員工餐廳(烹調)使用",
+            "expiry": "即食品(已過食用期限)"
       },
       {
-            "vendorNo": "28",
-            "city": "新北市",
-            "vendor": "享記食品有限公司",
+            "vendorNo": "19",
+            "city": "臺北市",
+            "vendor": "晶華國際酒店股份有限公司",
             "productNo": "90",
-            "productName": "青麻花椒油"
+            "productName": "烹調使用",
+            "expiry": "即食品(已過食用期限)"
       },
       {
             "vendorNo": "28",
             "city": "新北市",
             "vendor": "享記食品有限公司",
             "productNo": "91",
-            "productName": "麻辣鍋底醬"
+            "productName": "大紅袍花椒油",
+            "expiry": "2027.10.7"
       },
       {
             "vendorNo": "28",
             "city": "新北市",
             "vendor": "享記食品有限公司",
             "productNo": "92",
-            "productName": "麻辣鍋底醬(素)"
+            "productName": "麻辣紅油",
+            "expiry": "2027.10.7"
       },
       {
             "vendorNo": "28",
             "city": "新北市",
             "vendor": "享記食品有限公司",
             "productNo": "93",
-            "productName": "咖哩鍋底醬"
+            "productName": "青麻花椒油",
+            "expiry": "2027.10.7"
       },
       {
             "vendorNo": "28",
             "city": "新北市",
             "vendor": "享記食品有限公司",
             "productNo": "94",
-            "productName": "調味豆酥"
+            "productName": "麻辣鍋底醬",
+            "expiry": "2027.10.9"
+      },
+      {
+            "vendorNo": "28",
+            "city": "新北市",
+            "vendor": "享記食品有限公司",
+            "productNo": "95",
+            "productName": "麻辣鍋底醬(素)",
+            "expiry": "2027.11.3"
+      },
+      {
+            "vendorNo": "28",
+            "city": "新北市",
+            "vendor": "享記食品有限公司",
+            "productNo": "96",
+            "productName": "咖哩鍋底醬",
+            "expiry": "2027.4.19"
+      },
+      {
+            "vendorNo": "28",
+            "city": "新北市",
+            "vendor": "享記食品有限公司",
+            "productNo": "97",
+            "productName": "調味豆酥",
+            "expiry": "2027.4.9"
+      },
+      {
+            "vendorNo": "29",
+            "city": "新北市",
+            "vendor": "金色三麥餐飲股份有限公司",
+            "productNo": "98",
+            "productName": "巧達濃湯",
+            "expiry": "2026.10.26"
+      },
+      {
+            "vendorNo": "29",
+            "city": "新北市",
+            "vendor": "金色三麥餐飲股份有限公司",
+            "productNo": "99",
+            "productName": "涼拌墨魚醬",
+            "expiry": "2026.7.19"
+      },
+      {
+            "vendorNo": "29",
+            "city": "新北市",
+            "vendor": "金色三麥餐飲股份有限公司",
+            "productNo": "100",
+            "productName": "西班牙海鮮燉飯(高湯)",
+            "expiry": "2026.7.19"
+      },
+      {
+            "vendorNo": "29",
+            "city": "新北市",
+            "vendor": "金色三麥餐飲股份有限公司",
+            "productNo": "101",
+            "productName": "酸菜",
+            "expiry": "2026.7.22"
+      },
+      {
+            "vendorNo": "29",
+            "city": "新北市",
+            "vendor": "金色三麥餐飲股份有限公司",
+            "productNo": "102",
+            "productName": "海鮮鍋",
+            "expiry": "2026.7.12、2026.7.20、2026.7.26"
+      },
+      {
+            "vendorNo": "29",
+            "city": "新北市",
+            "vendor": "金色三麥餐飲股份有限公司",
+            "productNo": "103",
+            "productName": "紅醬",
+            "expiry": "2026.7.27"
+      },
+      {
+            "vendorNo": "41",
+            "city": "新北市",
+            "vendor": "老協珍股份有限公司",
+            "productNo": "104",
+            "productName": "TOMMI湯米-白醬鱈魚排米漢堡(2入)",
+            "expiry": "2027.6.25"
+      },
+      {
+            "vendorNo": "41",
+            "city": "新北市",
+            "vendor": "老協珍股份有限公司",
+            "productNo": "105",
+            "productName": "TOMMI湯米-海鮮蝦排米漢堡(1入)",
+            "expiry": "2027.6.25"
+      },
+      {
+            "vendorNo": "48",
+            "city": "新北市",
+            "vendor": "泰佶食品行",
+            "productNo": "106",
+            "productName": "肉粽(散裝)",
+            "expiry": "2027.4.24、2027.5.21"
       },
       {
             "vendorNo": "55",
             "city": "新北市",
             "vendor": "東穎食品實業有限公司",
-            "productNo": "95",
-            "productName": "沙拉醬"
+            "productNo": "107",
+            "productName": "沙拉醬",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "57",
             "city": "新北市",
             "vendor": "桂冠實業股份有限公司",
-            "productNo": "96",
-            "productName": "桂冠沙拉"
+            "productNo": "108",
+            "productName": "桂冠沙拉",
+            "expiry": "產品效期最晚到2026.7.15"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "109",
+            "productName": "蜂蜜芥末醬",
+            "expiry": "2026.05.26"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "110",
+            "productName": "煙燻芥末醬",
+            "expiry": "2026.05.26、2026.05.27"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "111",
+            "productName": "凱薩醬",
+            "expiry": "2026.05.11、2026.05.12、2026.05.13"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "112",
+            "productName": "薑汁番茄醬",
+            "expiry": "2026.05.27"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "113",
+            "productName": "刀口辣油",
+            "expiry": "2026.06.26"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "114",
+            "productName": "美玉白汁",
+            "expiry": "2026.05.28"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "115",
+            "productName": "青龍醬",
+            "expiry": "2026.05.16、2026.05.17"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "116",
+            "productName": "蔥油醬",
+            "expiry": "2026.07.25"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "117",
+            "productName": "義大利綜合菇",
+            "expiry": "2026.05.11、2026.05.12、2026.05.13"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "118",
+            "productName": "肉臊醬",
+            "expiry": "2026.07.25"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "119",
+            "productName": "打拋豬",
+            "expiry": "2026.07.26"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "120",
+            "productName": "榨菜肉絲",
+            "expiry": "2026.07.26"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "121",
+            "productName": "香料烤腿排",
+            "expiry": "2026.07.26、2026.07.27"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "122",
+            "productName": "德式酸菜",
+            "expiry": "2026.07.26"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "123",
+            "productName": "烤鮭魚碎肉",
+            "expiry": "2026.07.27"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "124",
+            "productName": "植物素排",
+            "expiry": "2026.10.27"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "125",
+            "productName": "皮蛋醬",
+            "expiry": "2026.07.28"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "126",
+            "productName": "油封鴨腿車輪餅",
+            "expiry": "2026.08.02、2026.08.09、2026.08.16"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "127",
+            "productName": "慢熬洋蔥醬",
+            "expiry": "2026.05.27、2026.06.02、2026.06.05、2026.06.06、2026.06.09、2026.06.10、2026.06.12"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "128",
+            "productName": "滷豬腳",
+            "expiry": "2026.07.25、2026.07.27"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "129",
+            "productName": "滷豬腱",
+            "expiry": "2026.07.27"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "130",
+            "productName": "滷棒腿",
+            "expiry": "2026.07.25"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "131",
+            "productName": "香草草莓小蛋糕",
+            "expiry": "2026.07.06、2026.07.07、2026.07.08、2026.07.11、2026.07.12、2026.07.13、2026.07.14、2026.07.15、2026.07.19、2026.07.21"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "132",
+            "productName": "芝麻蜂蜜小蛋糕",
+            "expiry": "2026.07.06、2026.07.07、2026.07.08、2026.07.11、2026.07.12、2026.07.13、2026.07.14、2026.07.15、2026.07.19、2026.07.21"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "133",
+            "productName": "焙茶柚香小蛋糕",
+            "expiry": "2026.07.06、2026.07.07、2026.07.08、2026.07.11、2026.07.12、2026.07.13、2026.07.15、2026.07.18、2026.07.19、2026.07.20"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "134",
+            "productName": "泰奶波士頓小蛋糕",
+            "expiry": "2026.07.06、2026.07.07、2026.07.08、2026.07.12、2026.07.14、2026.07.15、2026.07.19、2026.07.21"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "135",
+            "productName": "抹茶草莓小蛋糕",
+            "expiry": "2026.07.06、2026.07.07、2026.07.08、2026.07.11、2026.07.12、2026.07.13、2026.07.14、2026.07.15、2026.07.18、2026.07.19、2026.07.21"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "136",
+            "productName": "焙茶瑪德蓮",
+            "expiry": "2026.07.06、2026.07.07、2026.07.11、2026.07.13、2026.07.14、2026.07.19"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "137",
+            "productName": "咖啡小蛋糕",
+            "expiry": "2026.07.06、2026.07.07、2026.07.08、2026.07.12、2026.07.13、2026.07.14、2026.07.15、2026.07.18、2026.07.19、2026.07.20、2026.07.21"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "138",
+            "productName": "香草水蜜桃小蛋糕",
+            "expiry": "2026.07.06、2026.07.07、2026.07.08、2026.07.11、2026.07.12、2026.07.13、2026.07.14、2026.07.15、2026.07.19、2026.07.20、2026.07.21"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "139",
+            "productName": "檸檬小蛋糕",
+            "expiry": "2026.07.06、2026.07.08、2026.07.13、2026.07.15、2026.07.18、2026.07.20"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "140",
+            "productName": "波隆那肉醬",
+            "expiry": "2026.07.16、2026.08.01、2026.08.04、2026.08.08、2026.08.17、2026.08.31、2026.09.06、2026.09.15、2026.09.24"
+      },
+      {
+            "vendorNo": "64",
+            "city": "新北市",
+            "vendor": "路易莎職人咖啡股份有限公司",
+            "productNo": "141",
+            "productName": "印度咖哩醬",
+            "expiry": "2026.07.27、2026.08.05、2026.08.12、2026.08.15、2026.09.06、2026.09.21"
+      },
+      {
+            "vendorNo": "66",
+            "city": "新北市",
+            "vendor": "健衢生技有限公司",
+            "productNo": "142",
+            "productName": "炸甜不辣",
+            "expiry": "已逾有效日期"
+      },
+      {
+            "vendorNo": "67",
+            "city": "新北市",
+            "vendor": "大王肉脯店",
+            "productNo": "143",
+            "productName": "炸肉捲",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "79",
             "city": "新北市",
             "vendor": "華福食品股份有限公司",
-            "productNo": "97",
-            "productName": "麵包烘焙食品"
+            "productNo": "144",
+            "productName": "麵包烘焙食品",
+            "expiry": "已逾有效日期"
       },
       {
             "vendorNo": "86",
             "city": "新北市",
             "vendor": "廣達香食品股份有限公司",
-            "productNo": "98",
-            "productName": "塔塔醬"
+            "productNo": "145",
+            "productName": "塔塔醬",
+            "expiry": "2026.10.22"
       },
       {
             "vendorNo": "86",
             "city": "新北市",
             "vendor": "廣達香食品股份有限公司",
-            "productNo": "99",
-            "productName": "凱薩醬"
+            "productNo": "146",
+            "productName": "凱薩醬",
+            "expiry": "2026.10.16、2026.10.27"
       },
       {
             "vendorNo": "86",
             "city": "新北市",
             "vendor": "廣達香食品股份有限公司",
-            "productNo": "100",
-            "productName": "蜂蜜芥末醬"
+            "productNo": "147",
+            "productName": "蜂蜜芥末醬",
+            "expiry": "2026.7.29、2026.10.29"
       },
       {
             "vendorNo": "86",
             "city": "新北市",
             "vendor": "廣達香食品股份有限公司",
-            "productNo": "101",
-            "productName": "素食香鬆(海苔)"
+            "productNo": "148",
+            "productName": "素食香鬆(海苔)",
+            "expiry": "2027.4.16"
+      },
+      {
+            "vendorNo": "99",
+            "city": "桃園市",
+            "vendor": "野味企業有限公司",
+            "productNo": "149",
+            "productName": "便當",
+            "expiry": "即食品(已過食用期限)"
+      },
+      {
+            "vendorNo": "103",
+            "city": "桃園市",
+            "vendor": "芳水有限公司",
+            "productNo": "150",
+            "productName": "甜不辣",
+            "expiry": "即食品(已過食用期限)"
+      },
+      {
+            "vendorNo": "106",
+            "city": "桃園市",
+            "vendor": "點線麵餐飲(股)公司",
+            "productNo": "151",
+            "productName": "辣醬包原料",
+            "expiry": "2028.4.22"
+      },
+      {
+            "vendorNo": "106",
+            "city": "桃園市",
+            "vendor": "點線麵餐飲(股)公司",
+            "productNo": "152",
+            "productName": "素肉燥",
+            "expiry": "2028.4.23"
+      },
+      {
+            "vendorNo": "106",
+            "city": "桃園市",
+            "vendor": "點線麵餐飲(股)公司",
+            "productNo": "153",
+            "productName": "熟麵",
+            "expiry": "已逾有效日期"
+      },
+      {
+            "vendorNo": "112",
+            "city": "桃園市",
+            "vendor": "福泰團膳股份有限公司",
+            "productNo": "154",
+            "productName": "便當",
+            "expiry": "即食品(已過食用期限)"
       },
       {
             "vendorNo": "118",
             "city": "桃園市",
             "vendor": "大地農產有限公司",
-            "productNo": "102",
-            "productName": "蔥頭醬"
+            "productNo": "155",
+            "productName": "蔥頭醬",
+            "expiry": "2027.4.22"
       },
       {
             "vendorNo": "118",
             "city": "桃園市",
             "vendor": "大地農產有限公司",
-            "productNo": "103",
-            "productName": "油蔥酥"
+            "productNo": "156",
+            "productName": "油蔥酥",
+            "expiry": "2027.4.17"
+      },
+      {
+            "vendorNo": "125",
+            "city": "桃園市",
+            "vendor": "富煒食品有限公司",
+            "productNo": "157",
+            "productName": "公司行號-社會餐",
+            "expiry": "即食品(已過食用期限)"
       },
       {
             "vendorNo": "126",
             "city": "桃園市",
             "vendor": "龍膳坊企業有限公司",
-            "productNo": "104",
-            "productName": "冷凍餅皮"
+            "productNo": "158",
+            "productName": "冷凍餅皮",
+            "expiry": "2026.10.9~2026.11.10"
       },
       {
             "vendorNo": "131",
             "city": "桃園市",
             "vendor": "聯華食品工業股份有限公司-中壢",
-            "productNo": "105",
-            "productName": "荷卡炙燒明太子鮭魚烤飯糰"
+            "productNo": "159",
+            "productName": "荷卡炙燒明太子鮭魚烤飯糰",
+            "expiry": "2027.4.15"
       },
       {
             "vendorNo": "131",
             "city": "桃園市",
             "vendor": "聯華食品工業股份有限公司-中壢",
-            "productNo": "106",
-            "productName": "荷卡極上經典飯糰"
+            "productNo": "160",
+            "productName": "荷卡極上經典飯糰",
+            "expiry": "2027.4.9"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "161",
+            "productName": "(快煮餐)紅燒獅子頭",
+            "expiry": "116/4/24-4/30"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "162",
+            "productName": "(快煮餐)糖醋雞丁",
+            "expiry": "116/4/24-4/30"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "163",
+            "productName": "(快煮餐)海鮮豆腐煲",
+            "expiry": "116/4/24-5/1"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "164",
+            "productName": "(快煮餐)馬鈴薯燉牛肉",
+            "expiry": "116/4/24-4/29"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "165",
+            "productName": "(快煮餐)金沙豆腐",
+            "expiry": "116/4/24-4/28"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "166",
+            "productName": "(快煮餐)(預)馬鈴薯燉牛肉",
+            "expiry": "116/4/24-5/1"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "167",
+            "productName": "(快煮餐)三杯杏鮑菇",
+            "expiry": "116/4/25-4/30"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "168",
+            "productName": "(快煮餐)鐵板黑胡椒豆腐",
+            "expiry": "116/4/25-5/1"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "169",
+            "productName": "(快煮餐)(預)海鮮豆腐煲",
+            "expiry": "116/4/25-4/28"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "170",
+            "productName": "鐵板滑蛋炸豬排丼",
+            "expiry": "116/4/24-5/1"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "171",
+            "productName": "美式豬腿堡",
+            "expiry": "116/4/25-5/2"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "172",
+            "productName": "黃金魚堡(114年)",
+            "expiry": "116/4/25-5/2"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "173",
+            "productName": "魔王愛吃辣雞堡",
+            "expiry": "116/4/25-5/2"
+      },
+      {
+            "vendorNo": "142",
+            "city": "新竹縣",
+            "vendor": "屏榮食品新豐廠",
+            "productNo": "174",
+            "productName": "二配粗飽系雞腿排炒飯(114年)",
+            "expiry": "116/4/24-4/26"
       },
       {
             "vendorNo": "148",
             "city": "新竹縣",
             "vendor": "聯合利華股份有限公司",
-            "productNo": "107",
-            "productName": "香甜沙拉醬"
+            "productNo": "175",
+            "productName": "香甜沙拉醬",
+            "expiry": "2026.10.21"
       },
       {
             "vendorNo": "148",
             "city": "新竹縣",
             "vendor": "聯合利華股份有限公司",
-            "productNo": "108",
-            "productName": "美玉白汁"
+            "productNo": "176",
+            "productName": "美玉白汁",
+            "expiry": "2026.10.22"
       },
       {
             "vendorNo": "148",
             "city": "新竹縣",
             "vendor": "聯合利華股份有限公司",
-            "productNo": "109",
-            "productName": "百事福美玉白汁"
+            "productNo": "177",
+            "productName": "百事福美玉白汁",
+            "expiry": "2026.10.23"
       },
       {
             "vendorNo": "148",
             "city": "新竹縣",
             "vendor": "聯合利華股份有限公司",
-            "productNo": "110",
-            "productName": "香蒜風味醬"
+            "productNo": "178",
+            "productName": "香蒜風味醬",
+            "expiry": "2026.09.29"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "179",
+            "productName": "麻辣鍋底醬 3公斤/罐",
+            "expiry": "2028.06.04"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "180",
+            "productName": "麻辣鍋底醬 0.28公斤/罐",
+            "expiry": "2028.06.04"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "181",
+            "productName": "蕃茄湯料 1公斤/包",
+            "expiry": "2027.06.04"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "182",
+            "productName": "古早味油蔥拌醬 1公斤/包",
+            "expiry": "2027.05.25"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "183",
+            "productName": "古早味油蔥拌醬 0.06公斤/包",
+            "expiry": "2027.05.25"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "184",
+            "productName": "香辣油包 0.004公斤/包",
+            "expiry": "2027.11.30"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "185",
+            "productName": "麻醬醬包 0.045公斤/包",
+            "expiry": "2027.08.31"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "186",
+            "productName": "麻辣臭豆腐金滑菇 0.85公斤/包",
+            "expiry": "2027.11.24"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "187",
+            "productName": "麻油猴頭菇 0.6公斤/包",
+            "expiry": "2027.11.24"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "188",
+            "productName": "台閎蘑菇醬 2.9KG/罐",
+            "expiry": "2029.05.18"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "189",
+            "productName": "麻辣鍋底醬 1公斤/包",
+            "expiry": "2027.11.13"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "190",
+            "productName": "番茄鍋底醬 1公斤/包",
+            "expiry": "2027.11.13"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "191",
+            "productName": "美味大師 1公斤/包",
+            "expiry": "2027.11.12"
+      },
+      {
+            "vendorNo": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "productNo": "192",
+            "productName": "沙茶醬 2.9公斤/罐",
+            "expiry": "2028.05.05"
       },
       {
             "vendorNo": "188",
             "city": "臺中市",
             "vendor": "味源股份有限公司",
-            "productNo": "111",
-            "productName": "椒麻拌醬"
+            "productNo": "193",
+            "productName": "椒麻拌醬",
+            "expiry": "2027.04.27"
       },
       {
             "vendorNo": "188",
             "city": "臺中市",
             "vendor": "味源股份有限公司",
-            "productNo": "112",
-            "productName": "油蔥拌醬"
+            "productNo": "194",
+            "productName": "油蔥拌醬",
+            "expiry": "2027.06.24"
       },
       {
             "vendorNo": "188",
             "city": "臺中市",
             "vendor": "味源股份有限公司",
-            "productNo": "113",
-            "productName": "椒麻油"
+            "productNo": "195",
+            "productName": "椒麻油",
+            "expiry": "2027.06.23"
       },
       {
             "vendorNo": "188",
             "city": "臺中市",
             "vendor": "味源股份有限公司",
-            "productNo": "114",
-            "productName": "辣油"
+            "productNo": "196",
+            "productName": "ABAO辣油",
+            "expiry": "116.04.16、116.05.05、116.05.22、116.06.04、116.06.25"
       },
       {
             "vendorNo": "188",
             "city": "臺中市",
             "vendor": "味源股份有限公司",
-            "productNo": "115",
-            "productName": "油蔥蒜醬"
+            "productNo": "197",
+            "productName": "油蔥蒜醬",
+            "expiry": "2027.04.23"
       },
       {
             "vendorNo": "189",
             "city": "臺中市",
             "vendor": "大買家股份有限公司大里國光分公司",
-            "productNo": "116",
-            "productName": "麵包"
+            "productNo": "198",
+            "productName": "麵包",
+            "expiry": "即食品(已過食用期限)"
       },
       {
             "vendorNo": "189",
             "city": "臺中市",
             "vendor": "大買家股份有限公司大里國光分公司",
-            "productNo": "117",
-            "productName": "熟食"
+            "productNo": "199",
+            "productName": "熟食",
+            "expiry": "即食品(已過食用期限)"
       },
       {
             "vendorNo": "191",
             "city": "臺中市",
             "vendor": "頂裕食品股份有限公司",
-            "productNo": "118",
-            "productName": "素瓜子肉罐頭"
+            "productNo": "200",
+            "productName": "素瓜仔肉罐頭",
+            "expiry": "2030.04.15"
       },
       {
             "vendorNo": "203",
             "city": "臺中市",
             "vendor": "金安信食品有限公司",
-            "productNo": "119",
-            "productName": "烘焙用餡料"
+            "productNo": "201",
+            "productName": "切達芝士餡",
+            "expiry": "2026/10/6、2026/10/11"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "202",
+            "productName": "北海道牛奶風味餡",
+            "expiry": "2026/10/10"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "203",
+            "productName": "蜜烤地瓜餡",
+            "expiry": "2026/10/6、2026/10/11"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "204",
+            "productName": "烤地瓜餡",
+            "expiry": "2026/10/6、2026/10/11"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "205",
+            "productName": "蔬果南瓜泥",
+            "expiry": "2026/10/6"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "206",
+            "productName": "日式果子皮",
+            "expiry": "2027/4/23、2027/4/29"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "207",
+            "productName": "紅豆餡",
+            "expiry": "2026/7/12、2026/7/13"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "208",
+            "productName": "蛋糕用芋泥餡",
+            "expiry": "2026/5/3"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "209",
+            "productName": "香芋豆餡",
+            "expiry": "2026/7/12、2026/7/14"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "210",
+            "productName": "醇芋餡(顆粒)",
+            "expiry": "2026/5/28、2026/5/30"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "211",
+            "productName": "F.P芋頭粒餡CL",
+            "expiry": "2026/7/13"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "212",
+            "productName": "芋頭餡",
+            "expiry": "2026/10/9、2026/10/11、2027/4/14"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "213",
+            "productName": "炭焙烏龍茶餡",
+            "expiry": "2027/1/4"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "214",
+            "productName": "白玉QQ麻糬",
+            "expiry": "2026/10/6、2026/10/9、2027/4/9"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "215",
+            "productName": "Q心黑糖麻糬",
+            "expiry": "2026/12/8"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "216",
+            "productName": "Q心原味麻糬M.T",
+            "expiry": "2026/12/10"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "217",
+            "productName": "黑糖麻糬餡片",
+            "expiry": "2026/10/9"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "218",
+            "productName": "拔絲麻糬",
+            "expiry": "2026/4/13製造"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "219",
+            "productName": "原味麻糬切丁",
+            "expiry": "2027/4/12"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "220",
+            "productName": "蜂蜜麻糬切丁",
+            "expiry": "2027/4/12"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "221",
+            "productName": "黑糖麻糬切丁",
+            "expiry": "2026/10/9"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "222",
+            "productName": "和風黑糖QQ切丁",
+            "expiry": "2026/10/11"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "223",
+            "productName": "原味巧達Q心仁",
+            "expiry": "2026/10/11"
+      },
+      {
+            "vendorNo": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "productNo": "224",
+            "productName": "鹹蛋黃Q心仁",
+            "expiry": "2026/12/7、2026/12/12、2027/1/28"
+      },
+      {
+            "vendorNo": "226",
+            "city": "彰化縣",
+            "vendor": "麥仕佳食品股份有限公司",
+            "productNo": "225",
+            "productName": "麵包",
+            "expiry": "即食品(已過食用期限)"
+      },
+      {
+            "vendorNo": "227",
+            "city": "彰化縣",
+            "vendor": "源泰昌食品工廠",
+            "productNo": "226",
+            "productName": "素食包子",
+            "expiry": "即食品(已過食用期限)"
       },
       {
             "vendorNo": "232",
             "city": "彰化縣",
             "vendor": "禾家香食品股份有限公司",
-            "productNo": "120",
-            "productName": "水餃等麵製品"
+            "productNo": "227",
+            "productName": "水餃等麵製品",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "233",
+            "city": "彰化縣",
+            "vendor": "巧福實業股份有限公司",
+            "productNo": "228",
+            "productName": "肉鬆",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "250",
             "city": "南投縣",
             "vendor": "金福華",
-            "productNo": "121",
-            "productName": "沙茶醬"
+            "productNo": "229",
+            "productName": "沙茶醬",
+            "expiry": "2029.04.09、2029.04.12、2029.04.09、2029.04.12"
       },
       {
             "vendorNo": "250",
             "city": "南投縣",
             "vendor": "金福華",
-            "productNo": "122",
-            "productName": "清鍋底醬"
+            "productNo": "230",
+            "productName": "清鍋底醬",
+            "expiry": "2027.04.12"
       },
       {
             "vendorNo": "250",
             "city": "南投縣",
             "vendor": "金福華",
-            "productNo": "123",
-            "productName": "香蒜青蔥醬"
+            "productNo": "231",
+            "productName": "香蒜青蔥醬",
+            "expiry": "2027.04.14"
       },
       {
             "vendorNo": "250",
             "city": "南投縣",
             "vendor": "金福華",
-            "productNo": "124",
-            "productName": "麻辣醬"
+            "productNo": "232",
+            "productName": "麻辣醬",
+            "expiry": "2029.04.19"
       },
       {
             "vendorNo": "250",
             "city": "南投縣",
             "vendor": "金福華",
-            "productNo": "125",
-            "productName": "豆瓣醬"
+            "productNo": "233",
+            "productName": "豆瓣醬",
+            "expiry": "2027.04.12、2027.04.13、2027.04.14"
       },
       {
             "vendorNo": "250",
             "city": "南投縣",
             "vendor": "金福華",
-            "productNo": "126",
-            "productName": "綠咖哩湯底"
+            "productNo": "234",
+            "productName": "綠咖哩湯底",
+            "expiry": "2027.04.15"
       },
       {
             "vendorNo": "250",
             "city": "南投縣",
             "vendor": "金福華",
-            "productNo": "127",
-            "productName": "麻辣鴨血"
+            "productNo": "235",
+            "productName": "麻辣鴨血",
+            "expiry": "2027.02.27、2027.04.07、2027.05.20、2027.05.21"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "236",
+            "productName": "番茄肉醬義大利麵225g",
+            "expiry": "2027.04.16、2027.04.17、2027.04.26、2027.04.27、2027.04.16"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "237",
+            "productName": "泰式打拋豬肉炒飯170g",
+            "expiry": "2027.04.23、2027.04.30"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "238",
+            "productName": "火腿肉絲黃金蛋炒飯215g",
+            "expiry": "2027.04.16、2027.04.19、2027.04.20、2027.04.21、2027.04.22、2027.04.24、2027.04.26、2027.04.27、2027.04.29"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "239",
+            "productName": "奶油培根義大利麵225g",
+            "expiry": "2027.04.19、2027.04.20、2027.04.22、2027.04.23、2027.04.24、2027.04.30"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "240",
+            "productName": "香Q白米飯160g",
+            "expiry": "2027.04.19、2027.04.20、2027.04.22、2027.04.23、2027.04.24、2027.04.30"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "241",
+            "productName": "沙茶豬肉蛋炒飯170g",
+            "expiry": "2027.04.28"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "242",
+            "productName": "泰式辣炒雞肉拌飯280g",
+            "expiry": "2027.04.28"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "243",
+            "productName": "秘製滷雞翅100g",
+            "expiry": "2027.04.22、2027.04.24"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "244",
+            "productName": "勁辣泰式打拋豬200g",
+            "expiry": "2027.04.26"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "245",
+            "productName": "紅藜燕麥飯120g",
+            "expiry": "2027.04.26"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "246",
+            "productName": "番茄紅醬義大利麵220g",
+            "expiry": "2027.04.21"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "247",
+            "productName": "蒜香醃漬里肌豬排2200g",
+            "expiry": "2027.04.21"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "248",
+            "productName": "111年醃漬清肉排80g 2200g",
+            "expiry": "2027.04.19"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "249",
+            "productName": "112年醃漬原味雞胸塊 3000g",
+            "expiry": "2027.04.20"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "250",
+            "productName": "113年打拋雞肉醬1000g",
+            "expiry": "2027.04.15、2027.04.16"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "251",
+            "productName": "醃漬薄漿清肉排65g CL 1950g",
+            "expiry": "2027.04.19"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "252",
+            "productName": "醃漬黃金油雞腿排肉80gCL 2000g",
+            "expiry": "2027.04.19、2027.04.20"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "253",
+            "productName": "冷凍醃漬香雞排 2600g",
+            "expiry": "2027.04.19"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "254",
+            "productName": "2300g(中翅)/2500g(翅腿",
+            "expiry": "2026.04.25、2026.04.26"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "255",
+            "productName": "檸檬雞柳條1000g",
+            "expiry": "2027.04.20"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "256",
+            "productName": "黑胡椒豬肉燴飯 320g",
+            "expiry": "2027.04.21"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "257",
+            "productName": "香檸三節翅 2250g",
+            "expiry": "2027.04.20"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "258",
+            "productName": "美式燒烤翅腿600g",
+            "expiry": "2027.04.20"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "259",
+            "productName": "蟹肉風味炒飯200g",
+            "expiry": "2027.04.21"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "260",
+            "productName": "雞肉玉米蛋炒飯230g",
+            "expiry": "2027.04.16、2027.04.24"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "261",
+            "productName": "肉絲蛋炒飯230g",
+            "expiry": "2027.04.29"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "262",
+            "productName": "培根蛋炒飯230g",
+            "expiry": "2027.04.17、2027.04.23、2027.04.30"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "263",
+            "productName": "蕃茄紅醬義大利麵230g",
+            "expiry": "2027.04.29"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "264",
+            "productName": "泰式打拋豬肉炒飯190g",
+            "expiry": "2027.04.22"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "265",
+            "productName": "培根香蔥蛋炒飯230g",
+            "expiry": "2027.04.17"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "266",
+            "productName": "清香羅勒義大利麵230g",
+            "expiry": "2027.04.28"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "267",
+            "productName": "泰式打拋豬肉醬(凍)1000g",
+            "expiry": "2027.04.17"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "268",
+            "productName": "卜蜂泰式打拋豬肉醬1000g",
+            "expiry": "2027.04.28"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "269",
+            "productName": "蝦仁蛋炒飯280g",
+            "expiry": "2026.05.31、2026.06.01-17、2026.06.19、2026.06.21"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "270",
+            "productName": "泰式打拋豬肉飯309g",
+            "expiry": "2026.04.23、2026.04.24、2026.04.26、2026.04.27、2026.04.29、2026.04.30、2026.05.01、2026.05.04-07、2026.05.30、2026.05.31、2026.06.01、2026.06.02、2026.06.06、2026.06.09、2026.06.13、2026.06.16、2026.06.20"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "271",
+            "productName": "肉絲黃金蛋炒飯270g",
+            "expiry": "2026.04.23、2026.04.26、2026.05.03-04、2026.05.06-07、2026.05.19-21、2026.05.23-25、2026.05.27-29"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "272",
+            "productName": "爆炒滷雞胗116g",
+            "expiry": "2026.05.16-27"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "273",
+            "productName": "義式經典嫩雞胸100g",
+            "expiry": "2026.06.06-08、2026.06.10-12"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "274",
+            "productName": "黑胡椒蒜味雞柳條120g",
+            "expiry": "2026.04.27-30"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "275",
+            "productName": "義式雞胸肉840g",
+            "expiry": "2026.07.04、2026.07.08、2026.07.11"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "276",
+            "productName": "瑪莎曼咖哩雞肉840g",
+            "expiry": "2026.07.04、2026.07.08、2026.07.11"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "277",
+            "productName": "川味椒麻雞胸肉1000g",
+            "expiry": "2026.05.27-31、2026.06.01-06"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "278",
+            "productName": "醬爆雞胗100g",
+            "expiry": "2026.05.13-31、2026.06.01-02、2026.06.04"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "279",
+            "productName": "香滷雞胗90g",
+            "expiry": "2026.06.10-11、2026.06.13-18、2026.06.20-25、2026.06.27"
+      },
+      {
+            "vendorNo": "254",
+            "city": "南投縣",
+            "vendor": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+            "productNo": "280",
+            "productName": "香滷鳳爪160g",
+            "expiry": "2026.06.01、2026.06.03-04、2026.06.06"
       },
       {
             "vendorNo": "259",
             "city": "雲林縣",
             "vendor": "松鼎",
-            "productNo": "128",
-            "productName": "黃金調和油"
+            "productNo": "281",
+            "productName": "黃金調和油",
+            "expiry": "2.8L/桶*6：2028.04.13、2L/桶*6：2028.04.10、0.6L/桶*12：2028.04.10、1.8L/桶*6：2028.04.10"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "129",
-            "productName": "健康廚房纖活優格沙拉醬"
+            "productNo": "282",
+            "productName": "健康廚房纖活優格沙拉醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "130",
-            "productName": "台式香甜沙拉(無扣環)"
+            "productNo": "283",
+            "productName": "台式香甜沙拉(無扣環)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "131",
-            "productName": "105沙拉"
+            "productNo": "284",
+            "productName": "105沙拉",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "132",
-            "productName": "味全美食沙拉(205/白玉沙拉)"
+            "productNo": "285",
+            "productName": "味全美食沙拉(205/白玉沙拉)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "133",
-            "productName": "日式山葵風味沙拉醬(安倖)"
+            "productNo": "286",
+            "productName": "日式山葵風味沙拉醬(安倖)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "134",
-            "productName": "歐風甜口沙拉醬(歐式沙拉醬)"
+            "productNo": "287",
+            "productName": "歐風甜口沙拉醬(歐式沙拉醬)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "135",
-            "productName": "歐風甜口沙拉醬(香純)"
+            "productNo": "288",
+            "productName": "歐風甜口沙拉醬(香純)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "136",
-            "productName": "日式芳醇原味沙拉醬"
+            "productNo": "289",
+            "productName": "日式芳醇原味沙拉醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "137",
-            "productName": "101沙拉"
+            "productNo": "290",
+            "productName": "101沙拉",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "138",
-            "productName": "101-日式蛋黃沙拉醬"
+            "productNo": "291",
+            "productName": "101-日式蛋黃沙拉醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "139",
-            "productName": "106-歐風酸甜沙拉醬"
+            "productNo": "292",
+            "productName": "106-歐風酸甜沙拉醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "140",
-            "productName": "日式芳醇原味沙拉醬"
+            "productNo": "293",
+            "productName": "日式芳醇原味沙拉醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "141",
-            "productName": "F-104歐風鹹式沙拉醬"
+            "productNo": "294",
+            "productName": "F-104歐風鹹式沙拉醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "142",
-            "productName": "F-101日式蛋黃醬"
+            "productNo": "295",
+            "productName": "F-101日式蛋黃醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "143",
-            "productName": "健康廚房-焙煎芝麻"
+            "productNo": "296",
+            "productName": "健康廚房-焙煎芝麻",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "144",
-            "productName": "屋馬焙煎芝麻醬"
+            "productNo": "297",
+            "productName": "屋馬焙煎芝麻醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "145",
-            "productName": "味全焙煎芝麻(109版)"
+            "productNo": "298",
+            "productName": "味全焙煎芝麻(109版)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "146",
-            "productName": "經典凱薩沾拌淋醬(新)"
+            "productNo": "299",
+            "productName": "經典凱薩沾拌淋醬(新)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "147",
-            "productName": "油醋沙拉醬-經典凱薩(108新版)"
+            "productNo": "300",
+            "productName": "油醋沙拉醬-經典凱薩(108新版)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "148",
-            "productName": "特級沙拉醬"
+            "productNo": "301",
+            "productName": "特級沙拉醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "149",
-            "productName": "味全沙拉醬袋裝"
+            "productNo": "302",
+            "productName": "味全沙拉醬袋裝",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "150",
-            "productName": "F-台式特級沙拉"
+            "productNo": "303",
+            "productName": "F-台式特級沙拉",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "151",
-            "productName": "味全105S沙拉醬"
+            "productNo": "304",
+            "productName": "味全105S沙拉醬",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "260",
             "city": "雲林縣",
             "vendor": "味全食品工業股份有限公司",
-            "productNo": "152",
-            "productName": "105沙拉醬袋裝"
+            "productNo": "305",
+            "productName": "105沙拉醬袋裝",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "263",
+            "city": "雲林縣",
+            "vendor": "味王股份有限公司",
+            "productNo": "306",
+            "productName": "原汁牛肉湯麵(袋裝)",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "263",
+            "city": "雲林縣",
+            "vendor": "味王股份有限公司",
+            "productNo": "307",
+            "productName": "紅燒牛肉湯麵(袋裝、碗裝)",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "263",
+            "city": "雲林縣",
+            "vendor": "味王股份有限公司",
+            "productNo": "308",
+            "productName": "金味王紅燒牛肉麵(碗裝)",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "263",
+            "city": "雲林縣",
+            "vendor": "味王股份有限公司",
+            "productNo": "309",
+            "productName": "十三香麻辣拌麵(袋裝、碗裝)",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "263",
+            "city": "雲林縣",
+            "vendor": "味王股份有限公司",
+            "productNo": "310",
+            "productName": "辣辣麻辣燙湯麵(袋裝)",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "263",
+            "city": "雲林縣",
+            "vendor": "味王股份有限公司",
+            "productNo": "311",
+            "productName": "辣辣海鮮湯麵(袋裝)",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "263",
+            "city": "雲林縣",
+            "vendor": "味王股份有限公司",
+            "productNo": "312",
+            "productName": "素食麵(袋裝)",
+            "expiry": "調查中"
+      },
+      {
+            "vendorNo": "263",
+            "city": "雲林縣",
+            "vendor": "味王股份有限公司",
+            "productNo": "313",
+            "productName": "燻香素雞湯麵(桶裝)",
+            "expiry": "調查中"
       },
       {
             "vendorNo": "268",
             "city": "雲林縣",
             "vendor": "張O發",
-            "productNo": "153",
-            "productName": "油炸豆包"
+            "productNo": "314",
+            "productName": "油炸豆包",
+            "expiry": "散裝，已逾有效日期"
       },
       {
             "vendorNo": "269",
             "city": "雲林縣",
             "vendor": "林O隆",
-            "productNo": "154",
-            "productName": "油炸豆包"
+            "productNo": "315",
+            "productName": "油炸豆包",
+            "expiry": "散裝，已逾有效日期"
       },
       {
             "vendorNo": "270",
             "city": "雲林縣",
             "vendor": "峰妙商行",
-            "productNo": "155",
-            "productName": "油炸豆包"
+            "productNo": "316",
+            "productName": "油炸豆包",
+            "expiry": "散裝，已逾有效日期"
       },
       {
             "vendorNo": "273",
             "city": "雲林縣",
             "vendor": "玉品實業有限公司",
-            "productNo": "156",
-            "productName": "油炸豆包"
+            "productNo": "317",
+            "productName": "油炸豆包",
+            "expiry": "散裝，已逾有效日期"
       },
       {
             "vendorNo": "276",
             "city": "雲林縣",
             "vendor": "廖O盛",
-            "productNo": "157",
-            "productName": "油炸豆包"
+            "productNo": "318",
+            "productName": "油炸豆包",
+            "expiry": "散裝，已逾有效日期"
       },
       {
             "vendorNo": "292",
             "city": "臺南市",
             "vendor": "聯瑞食品科技股份有限公司",
-            "productNo": "158",
-            "productName": "川味紅油冷麵醬"
+            "productNo": "319",
+            "productName": "川味紅油冷麵醬",
+            "expiry": "2027.06.28"
       },
       {
             "vendorNo": "292",
             "city": "臺南市",
             "vendor": "聯瑞食品科技股份有限公司",
-            "productNo": "159",
-            "productName": "沙拉及美乃滋(赤象拔蚌沙拉、水果沙拉、辣味美奶滋)"
+            "productNo": "320",
+            "productName": "赤象拔蚌沙拉",
+            "expiry": "2027.11.28"
+      },
+      {
+            "vendorNo": "292",
+            "city": "臺南市",
+            "vendor": "聯瑞食品科技股份有限公司",
+            "productNo": "321",
+            "productName": "水果沙拉",
+            "expiry": "2027.05.18、2027.05.19"
+      },
+      {
+            "vendorNo": "292",
+            "city": "臺南市",
+            "vendor": "聯瑞食品科技股份有限公司",
+            "productNo": "322",
+            "productName": "辣味美乃滋",
+            "expiry": "2027.05.10、2027.05.11"
       },
       {
             "vendorNo": "317",
             "city": "高雄市",
             "vendor": "維義事業股份有限公司",
-            "productNo": "160",
-            "productName": "維義大豆沙拉油"
+            "productNo": "323",
+            "productName": "維義大豆沙拉油",
+            "expiry": "2027.04.03"
       },
       {
             "vendorNo": "317",
             "city": "高雄市",
             "vendor": "維義事業股份有限公司",
-            "productNo": "161",
-            "productName": "順發興專用油"
+            "productNo": "324",
+            "productName": "順發興專用油",
+            "expiry": "2027.04.03"
       },
       {
             "vendorNo": "317",
             "city": "高雄市",
             "vendor": "維義事業股份有限公司",
-            "productNo": "162",
-            "productName": "鼎冠油炸專用油"
+            "productNo": "325",
+            "productName": "鼎冠油炸專用油",
+            "expiry": "2027.04.14"
       },
       {
             "vendorNo": "317",
             "city": "高雄市",
             "vendor": "維義事業股份有限公司",
-            "productNo": "163",
-            "productName": "鼎冠大豆沙拉油"
+            "productNo": "326",
+            "productName": "鼎冠大豆沙拉油",
+            "expiry": "2027.04.03"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "164",
-            "productName": "里仁調味便當菜155g"
+            "productNo": "327",
+            "productName": "里仁調味便當菜155g",
+            "expiry": "2028.04.23"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "165",
-            "productName": "紅油辣椒410g"
+            "productNo": "328",
+            "productName": "紅油辣椒410g",
+            "expiry": "2029.04.26"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "166",
-            "productName": "甜麵醬460g"
+            "productNo": "329",
+            "productName": "甜麵醬460g",
+            "expiry": "2028.04.28"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "167",
-            "productName": "眷村剁椒蒜香"
+            "productNo": "330",
+            "productName": "眷村剁椒蒜香",
+            "expiry": "2029.04.27"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "168",
-            "productName": "老北京440g"
+            "productNo": "331",
+            "productName": "老北京440g",
+            "expiry": "2029.04.29"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "169",
-            "productName": "家常辣270g"
+            "productNo": "332",
+            "productName": "家常辣270g",
+            "expiry": "2029.05.04"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "170",
-            "productName": "訂製品_甜麵醬含香油及乳酸20kg"
+            "productNo": "333",
+            "productName": "訂製品_甜麵醬含香油及乳酸20kg",
+            "expiry": "2026.09.05"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "171",
-            "productName": "甜麵醬3kg"
+            "productNo": "334",
+            "productName": "甜麵醬3kg",
+            "expiry": "2027.05.06"
       },
       {
             "vendorNo": "327",
             "city": "高雄市",
             "vendor": "明德食品工業股份有限公司",
-            "productNo": "172",
-            "productName": "眷村剁椒蒜香150g"
+            "productNo": "335",
+            "productName": "眷村剁椒蒜香150g",
+            "expiry": "2029.05.12"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "173",
-            "productName": "黑芝麻醬TA-6320"
+            "productNo": "336",
+            "productName": "黑芝麻醬TA-6320",
+            "expiry": "2026.10.23"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "174",
-            "productName": "金豚骨湯TA-6154"
+            "productNo": "337",
+            "productName": "金豚骨湯TA-6154",
+            "expiry": "2027.04.23"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "175",
-            "productName": "多蜜醬TA"
+            "productNo": "338",
+            "productName": "多蜜醬TA",
+            "expiry": "2027.04.27"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "176",
-            "productName": "黃金味噌醬"
+            "productNo": "339",
+            "productName": "黃金味噌醬",
+            "expiry": "2027.04.29"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "177",
-            "productName": "柴魚昆布TA-2271"
+            "productNo": "340",
+            "productName": "柴魚昆布TA-2271",
+            "expiry": "2027.05.03"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "178",
-            "productName": "白芝麻醬TA-6298"
+            "productNo": "341",
+            "productName": "白芝麻醬TA-6298",
+            "expiry": "2026.11.05"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "179",
-            "productName": "四川豚骨麻辣TA-2232"
+            "productNo": "342",
+            "productName": "四川豚骨麻辣TA-2232",
+            "expiry": "2027.05.05"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "180",
-            "productName": "九州豚骨"
+            "productNo": "343",
+            "productName": "九州豚骨",
+            "expiry": "2027.05.07"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "181",
-            "productName": "豚骨高湯TA-6630"
+            "productNo": "344",
+            "productName": "豚骨高湯TA-6630",
+            "expiry": "2027.08.07"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "182",
-            "productName": "黑咖哩醬TA-1249"
+            "productNo": "345",
+            "productName": "黑咖哩醬TA-1249",
+            "expiry": "2027.05.07"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "183",
-            "productName": "甘口黑咖哩TA-1705"
+            "productNo": "346",
+            "productName": "甘口黑咖哩TA-1705",
+            "expiry": "2027.05.10"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "184",
-            "productName": "麻辣火鍋TA-3683"
+            "productNo": "347",
+            "productName": "麻辣火鍋TA-3683",
+            "expiry": "2027.05.10"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "185",
-            "productName": "柴魚昆布TA-2271"
+            "productNo": "348",
+            "productName": "柴魚昆布TA-2271",
+            "expiry": "2027.05.11"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "186",
-            "productName": "甘口黑咖哩TA-1705"
+            "productNo": "349",
+            "productName": "甘口黑咖哩TA-1705",
+            "expiry": "2027.05.13"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "187",
-            "productName": "柴魚昆布TA-2380"
+            "productNo": "350",
+            "productName": "柴魚昆布TA-2380",
+            "expiry": "2027.05.13"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "188",
-            "productName": "豚骨高湯TA-6630"
+            "productNo": "351",
+            "productName": "豚骨高湯TA-6630",
+            "expiry": "2027.08.14"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "189",
-            "productName": "麻辣高湯TA-6899"
+            "productNo": "352",
+            "productName": "麻辣高湯TA-6899",
+            "expiry": "2027.05.14"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "190",
-            "productName": "牛肉湯TA-3899"
+            "productNo": "353",
+            "productName": "牛肉湯TA-3899",
+            "expiry": "2027.05.14"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "191",
-            "productName": "柴魚昆布TA-2271"
+            "productNo": "354",
+            "productName": "柴魚昆布TA-2271",
+            "expiry": "2027.05.17"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "192",
-            "productName": "日式咖哩醬BFT"
+            "productNo": "355",
+            "productName": "日式咖哩醬BFT",
+            "expiry": "2027.05.17"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "193",
-            "productName": "黑咖哩醬TA-5495"
+            "productNo": "356",
+            "productName": "黑咖哩醬TA-5495",
+            "expiry": "2027.05.17"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "194",
-            "productName": "豚骨高湯TA-6630"
+            "productNo": "357",
+            "productName": "豚骨高湯TA-6630",
+            "expiry": "2027.08.18"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "195",
-            "productName": "海鮮醬油TA-5758"
+            "productNo": "358",
+            "productName": "海鮮醬油TA-5758",
+            "expiry": "2027.05.18"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "196",
-            "productName": "燒肉醬TA"
+            "productNo": "359",
+            "productName": "燒肉醬TA",
+            "expiry": "2027.05.19"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "197",
-            "productName": "九州豚骨"
+            "productNo": "360",
+            "productName": "九州豚骨",
+            "expiry": "2027.05.20"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "198",
-            "productName": "日式咖哩醬BFT"
+            "productNo": "361",
+            "productName": "日式咖哩醬BFT",
+            "expiry": "2027.05.21"
       },
       {
             "vendorNo": "337",
             "city": "屏東縣",
             "vendor": "台灣有明食品股份有限公司",
-            "productNo": "199",
-            "productName": "甘口黑咖哩TA-1705"
+            "productNo": "362",
+            "productName": "甘口黑咖哩TA-1705",
+            "expiry": "2027.05.24"
+      },
+      {
+            "vendorNo": "337",
+            "city": "屏東縣",
+            "vendor": "台灣有明食品股份有限公司",
+            "productNo": "363",
+            "productName": "拌麵醬TA-6805",
+            "expiry": "2027.05.25"
+      },
+      {
+            "vendorNo": "337",
+            "city": "屏東縣",
+            "vendor": "台灣有明食品股份有限公司",
+            "productNo": "364",
+            "productName": "濃厚豚骨高湯TA-3338",
+            "expiry": "2027.05.27"
+      },
+      {
+            "vendorNo": "337",
+            "city": "屏東縣",
+            "vendor": "台灣有明食品股份有限公司",
+            "productNo": "365",
+            "productName": "四川豚骨麻辣TA-2232",
+            "expiry": "2027.06.02"
+      },
+      {
+            "vendorNo": "337",
+            "city": "屏東縣",
+            "vendor": "台灣有明食品股份有限公司",
+            "productNo": "366",
+            "productName": "大蒜激辛拉麵高湯TA-4774",
+            "expiry": "2027.06.15"
+      },
+      {
+            "vendorNo": "337",
+            "city": "屏東縣",
+            "vendor": "台灣有明食品股份有限公司",
+            "productNo": "367",
+            "productName": "味噌醃醬TA-7152",
+            "expiry": "2027.06.17"
+      },
+      {
+            "vendorNo": "337",
+            "city": "屏東縣",
+            "vendor": "台灣有明食品股份有限公司",
+            "productNo": "368",
+            "productName": "大蒜激辛拉麵高湯TA-4774",
+            "expiry": "2027.06.23"
       },
       {
             "vendorNo": "338",
             "city": "屏東縣",
             "vendor": "崁頂義豐麻油廠",
-            "productNo": "200",
-            "productName": "普通香油"
+            "productNo": "369",
+            "productName": "普通香油",
+            "expiry": "2027.04.13、2027.04.20、2027.04.27、2027.05.04、2027.05.11"
       },
       {
             "vendorNo": "338",
             "city": "屏東縣",
             "vendor": "崁頂義豐麻油廠",
-            "productNo": "201",
-            "productName": "特級香油"
+            "productNo": "370",
+            "productName": "特級香油",
+            "expiry": "2027.04.13、2027.04.20、2027.04.27、2027.05.04、2027.05.11"
       },
       {
             "vendorNo": "338",
             "city": "屏東縣",
             "vendor": "崁頂義豐麻油廠",
-            "productNo": "202",
-            "productName": "香油"
+            "productNo": "371",
+            "productName": "香油",
+            "expiry": "2027.04.13、2027.04.20、2027.04.27、2027.05.04、2027.05.11"
       },
       {
             "vendorNo": "338",
             "city": "屏東縣",
             "vendor": "崁頂義豐麻油廠",
-            "productNo": "203",
-            "productName": "普通麻油"
+            "productNo": "372",
+            "productName": "普通麻油",
+            "expiry": "2027.04.13、2027.04.20、2027.04.27、2027.05.04、2027.05.11"
       },
       {
             "vendorNo": "338",
             "city": "屏東縣",
             "vendor": "崁頂義豐麻油廠",
-            "productNo": "204",
-            "productName": "麻醬包"
+            "productNo": "373",
+            "productName": "麻醬包",
+            "expiry": "2027.04.13、2027.04.20、2027.04.27、2027.05.04、2027.05.11"
       },
       {
             "vendorNo": "347",
             "city": "宜蘭縣",
             "vendor": "惠眾食品工業股份有限公司",
-            "productNo": "205",
-            "productName": "SH番茄汁鮪魚腹肉"
+            "productNo": "374",
+            "productName": "SH番茄汁鮪魚腹肉",
+            "expiry": "2029.6.10"
       },
       {
             "vendorNo": "347",
             "city": "宜蘭縣",
             "vendor": "惠眾食品工業股份有限公司",
-            "productNo": "206",
-            "productName": "紅SH油漬鮪魚"
+            "productNo": "375",
+            "productName": "紅SH油漬鮪魚",
+            "expiry": "2029.6.11"
       },
       {
             "vendorNo": "347",
             "city": "宜蘭縣",
             "vendor": "惠眾食品工業股份有限公司",
-            "productNo": "207",
-            "productName": "綠SH油漬鮪魚"
+            "productNo": "376",
+            "productName": "綠SH油漬鮪魚",
+            "expiry": "2029.6.10"
       },
       {
             "vendorNo": "347",
             "city": "宜蘭縣",
             "vendor": "惠眾食品工業股份有限公司",
-            "productNo": "208",
-            "productName": "三興特製紅燒鰻"
+            "productNo": "377",
+            "productName": "三興特製紅燒鰻",
+            "expiry": "2029.6.7、2029.6.8"
       },
       {
             "vendorNo": "347",
             "city": "宜蘭縣",
             "vendor": "惠眾食品工業股份有限公司",
-            "productNo": "209",
-            "productName": "三興辣味燒鰻"
+            "productNo": "378",
+            "productName": "三興辣味燒鰻",
+            "expiry": "2029.6.9"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "210",
-            "productName": "(川島)豆竹"
+            "productNo": "379",
+            "productName": "(川島)豆竹",
+            "expiry": "2027.5.12、2027.6.1、2027.6.2"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "211",
-            "productName": "(川島)一級棒A"
+            "productNo": "380",
+            "productName": "(川島)一級棒A",
+            "expiry": "2027.5.13、2027.5.14、2027.5.20、2027.5.21"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "212",
-            "productName": "(川島)一級棒"
+            "productNo": "381",
+            "productName": "(川島)一級棒",
+            "expiry": "2027.5.18、2027.5.24、2027.5.25、2027.5.28、2027.5.31"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "213",
-            "productName": "(川島)北海貝"
+            "productNo": "382",
+            "productName": "(川島)北海貝",
+            "expiry": "2027.5.19"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "214",
-            "productName": "(川島)魚豆腐"
+            "productNo": "383",
+            "productName": "(川島)魚豆腐",
+            "expiry": "2027.5.19、2027.5.31、2027.6.2"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "215",
-            "productName": "(川島)起司海鲜卷"
+            "productNo": "384",
+            "productName": "(川島)起司海鲜卷",
+            "expiry": "2027.5.20"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "216",
-            "productName": "(川島)竹輪"
+            "productNo": "385",
+            "productName": "(川島)竹輪",
+            "expiry": "2027.5.21、2027.5.24"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "217",
-            "productName": "(川島)切片椿花"
+            "productNo": "386",
+            "productName": "(川島)切片椿花",
+            "expiry": "2027.5.21"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "218",
-            "productName": "(川島)北海翅"
+            "productNo": "387",
+            "productName": "(川島)北海翅",
+            "expiry": "2027.5.26、2027.5.27"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "219",
-            "productName": "(川島)香檬麻吉燒"
+            "productNo": "388",
+            "productName": "(川島)香檬麻吉燒",
+            "expiry": "2027.5.26"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "220",
-            "productName": "(川島)魚卵卷"
+            "productNo": "389",
+            "productName": "(川島)魚卵卷",
+            "expiry": "2027.5.27"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "221",
-            "productName": "(川島)切片魚板"
+            "productNo": "390",
+            "productName": "(川島)切片魚板",
+            "expiry": "2027.5.28、2027.5.31、2027.6.1"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "222",
-            "productName": "(川島)一口天"
+            "productNo": "391",
+            "productName": "(川島)一口天",
+            "expiry": "2027.5.17、2027.6.1"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "223",
-            "productName": "(丸大)一口天"
+            "productNo": "392",
+            "productName": "(丸大)一口天",
+            "expiry": "2027.5.17"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "224",
-            "productName": "(丸大)一級棒A"
+            "productNo": "393",
+            "productName": "(丸大)一級棒A",
+            "expiry": "2027.5.17"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "225",
-            "productName": "(丸大)北海翅"
+            "productNo": "394",
+            "productName": "(丸大)北海翅",
+            "expiry": "2027.5.18、2027.5.31"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "226",
-            "productName": "(丸大)魚豆腐"
+            "productNo": "395",
+            "productName": "(丸大)魚豆腐",
+            "expiry": "2027.5.18、2027.5.20、2027.5.26、2027.6.1"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "227",
-            "productName": "(丸大)豆竹"
+            "productNo": "396",
+            "productName": "(丸大)豆竹",
+            "expiry": "2027.5.19、2027.5.28"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "228",
-            "productName": "(丸大)魚卵卷"
+            "productNo": "397",
+            "productName": "(丸大)魚卵卷",
+            "expiry": "2027.5.24"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "229",
-            "productName": "(丸大)切片魚板"
+            "productNo": "398",
+            "productName": "(丸大)切片魚板",
+            "expiry": "2027.5.25"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "230",
-            "productName": "(丸大)圓蝦味球"
+            "productNo": "399",
+            "productName": "(丸大)圓蝦味球",
+            "expiry": "2027.5.25"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "231",
-            "productName": "(丸大)蝦味球"
+            "productNo": "400",
+            "productName": "(丸大)蝦味球",
+            "expiry": "2027.5.25"
       },
       {
             "vendorNo": "348",
             "city": "宜蘭縣",
             "vendor": "隆盛食品冷凍股份有限公司",
-            "productNo": "232",
-            "productName": "(小武)魚豆腐"
+            "productNo": "401",
+            "productName": "(小武)魚豆腐",
+            "expiry": "2027.5.27"
       }
 ];
 
@@ -8528,7 +10113,7 @@
     function renderSearchTabs(counts) {
       const tabs = [
         { key: "oil", label: `問題油品 ${counts.oil}` },
-        { key: "products", label: `232項產品 ${counts.products}` },
+        { key: "products", label: `預防性下架產品 ${counts.products}` },
         { key: "downstream", label: `下游業者 ${counts.downstream}` },
         { key: "schools", label: `影響學校 ${counts.schools}` }
       ];
@@ -8570,7 +10155,9 @@
           item.city,
           item.vendor,
           item.productNo,
-          item.productName
+          item.productName,
+          item.expiry,
+          item.expiry
         ].some(value => String(value).toLowerCase().includes(key));
       });
 
@@ -8603,9 +10190,9 @@
 
       const total = counts.oil + counts.products + counts.downstream + counts.schools;
       if (key) {
-        resultCount.textContent = `搜尋結果：問題油品 ${counts.oil} 筆｜232項產品 ${counts.products} 筆｜下游業者 ${counts.downstream} 筆｜影響學校 ${counts.schools} 筆`;
+        resultCount.textContent = `搜尋結果：問題油品 ${counts.oil} 筆｜預防性下架產品 ${counts.products} 筆｜下游業者 ${counts.downstream} 筆｜影響學校 ${counts.schools} 筆`;
       } else {
-        resultCount.textContent = `目前資料：問題油品 ${oilItems.length} 筆｜232項產品 ${productList232.length} 項｜下游業者 ${downstreamData.length} 筆｜影響學校 ${schoolData.length} 所/單位`;
+        resultCount.textContent = `目前資料：問題油品 ${oilItems.length} 筆｜預防性下架產品 ${productList232.length} 項｜下游業者 ${downstreamData.length} 筆｜影響學校 ${schoolData.length} 所/單位`;
       }
 
       emptyMsg.style.display = total ? "none" : "block";
@@ -8654,6 +10241,7 @@
             <th>業者</th>
             <th>產品序號</th>
             <th>產品名稱</th>
+            <th>有效日期</th>
           </tr>
         `;
         unifiedSearchBody.innerHTML = filteredProducts.map(item => `
@@ -8663,6 +10251,7 @@
             <td>${item.vendor}</td>
             <td><strong>${item.productNo}</strong></td>
             <td>${item.productName}</td>
+            <td>${item.expiry || "-"}</td>
           </tr>
         `).join("");
       }
@@ -8777,6 +10366,7 @@
           <td>${item.vendor}</td>
           <td><strong>${item.productNo}</strong></td>
           <td>${item.productName}</td>
+          <td>${item.expiry || "-"}</td>
         </tr>
       `).join("");
     }
