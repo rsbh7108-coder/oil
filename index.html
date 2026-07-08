@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中聯油脂案｜台中市民非官方懶人包</title>
+  <style>
+    :root {
+      --bg: #f7f4ee;
+      --card: #ffffff;
+      --text: #243042;
+      --muted: #6b7280;
+      --primary: #185c7a;
+      --primary-dark: #0f3d52;
+      --accent: #e65a2e;
+      --accent-soft: #fff0e8;
+      --warning: #f6b21a;
+      --line: #e5e7eb;
+      --green: #16855f;
+      --blue-soft: #eaf6fb;
+      --shadow: 0 10px 30px rgba(22, 35, 52, 0.10);
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(246, 178, 26, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(24, 92, 122, 0.18), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background: rgba(247, 244, 238, 0.86);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.7);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 64px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: 0.04em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--warning));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 20px;
+      box-shadow: 0 8px 18px rgba(230, 90, 46, 0.25);
+    }
+
+    .nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
+    .nav a:hover {
+      background: var(--blue-soft);
+    }
+
+    .hero {
+      padding: 56px 0 30px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-main {
+      background: linear-gradient(135deg, #12384d, #185c7a);
+      color: #fff;
+      border-radius: 28px;
+      padding: clamp(28px, 5vw, 54px);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #fff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin: 22px 0 12px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 760px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      border: 0;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--primary-dark);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(230, 90, 46, 0.28);
+    }
+
+    .status-panel {
+      display: grid;
+      gap: 16px;
+    }
+
+    .status-card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(229, 231, 235, 0.8);
+    }
+
+    .status-card strong {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .status-card .big {
+      color: var(--accent);
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .notice {
+      background: #fff8db;
+      color: #664600;
+      border: 1px solid #ffe08a;
+      border-radius: 18px;
+      padding: 14px 16px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 38px 0;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 8px;
+      font-size: clamp(26px, 3vw, 38px);
+      letter-spacing: -0.03em;
+      color: var(--primary-dark);
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cards-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .process-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border-top: 6px solid var(--primary);
+    }
+
+    .process-card.exception {
+      border-top-color: var(--accent);
+    }
+
+    .process-card h3 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      color: var(--primary-dark);
+    }
+
+    .steps {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      font-weight: 800;
+    }
+
+    .step-icon {
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      border-radius: 12px;
+      background: var(--blue-soft);
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    .arrow {
+      text-align: center;
+      color: var(--muted);
+      font-weight: 900;
+    }
+
+    .search-box {
+      background: var(--card);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(229, 231, 235, 0.8);
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      border: 2px solid var(--line);
+      border-radius: 16px;
+      padding: 15px 16px;
+      font-size: 17px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    input[type="search"]:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(24, 92, 122, 0.12);
+    }
+
+    .results-count {
+      margin-top: 12px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 780px;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f8fafc;
+      color: var(--primary-dark);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .tag-red {
+      color: #9a3412;
+      background: #ffedd5;
+    }
+
+    .tag-green {
+      color: #166534;
+      background: #dcfce7;
+    }
+
+    .tag-blue {
+      color: #075985;
+      background: #e0f2fe;
+    }
+
+    .tag-gray {
+      color: #374151;
+      background: #f3f4f6;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .tab-btn {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--primary-dark);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 900;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .vendor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .vendor-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+    }
+
+    .vendor-card h3 {
+      margin: 0 0 8px;
+      color: var(--primary-dark);
+    }
+
+    .vendor-card p {
+      margin: 6px 0;
+      color: var(--muted);
+    }
+
+    .vendor-card .phone {
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      border-radius: 999px;
+      background: linear-gradient(var(--primary), var(--accent));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 64px;
+      margin-bottom: 18px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 9px;
+      top: 18px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #fff;
+      border: 6px solid var(--primary);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    }
+
+    .timeline-item.taichung .timeline-dot {
+      border-color: var(--accent);
+    }
+
+    .timeline-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(229, 231, 235, 0.85);
+    }
+
+    .timeline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-card h3 {
+      margin: 0 0 8px;
+      color: var(--primary-dark);
+    }
+
+    .timeline-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .qr-box {
+      background: #fff;
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(229, 231, 235, 0.85);
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .qr-placeholder {
+      width: 120px;
+      height: 120px;
+      border: 3px dashed #cbd5e1;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 900;
+      background: #f8fafc;
+      font-size: 13px;
+      padding: 8px;
+    }
+
+    .qr-box h3 {
+      margin: 0 0 6px;
+      color: var(--primary-dark);
+    }
+
+    .qr-box p {
+      margin: 0 0 8px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 36px 0 52px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .update-badge {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 999px;
+      padding: 12px 16px;
+      box-shadow: 0 12px 28px rgba(230, 90, 46, 0.32);
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .empty {
+      display: none;
+      padding: 20px;
+      background: #fff7ed;
+      color: #9a3412;
+      border-radius: 16px;
+      font-weight: 800;
+      margin-top: 16px;
+    }
+
+
+    .official-link-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .official-link-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(229, 231, 235, 0.85);
+    }
+
+    .official-link-card h3 {
+      margin: 0 0 8px;
+      color: var(--primary-dark);
+    }
+
+    .official-link-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .official-url {
+      word-break: break-all;
+      color: var(--primary);
+      font-weight: 800;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+
+    #refund .vendor-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #refund .vendor-card {
+      word-break: break-word;
+    }
+
+    #refund .vendor-card p {
+      line-height: 1.65;
+    }
+
+    @media (max-width: 860px) {
+      #refund .vendor-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .downstream-box {
+      background: var(--card);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(229, 231, 235, 0.8);
+    }
+
+    .downstream-controls {
+      display: grid;
+      grid-template-columns: minmax(220px, 340px) 1fr;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .downstream-controls select {
+      width: 100%;
+      border: 2px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 17px;
+      outline: none;
+      font-family: inherit;
+      background: #fff;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .city-summary {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .downstream-note {
+      margin: 12px 0 0;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fff8db;
+      color: #664600;
+      font-weight: 700;
+    }
+
+    @media (max-width: 860px) {
+      .official-link-grid,
+      .downstream-controls {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .cards-2,
+      .vendor-grid,
+      .source-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 0;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 26px;
+      }
+
+      .hero-main {
+        min-height: auto;
+      }
+
+      .search-row {
+        grid-template-columns: 1fr;
+      }
+
+      .qr-box {
+        grid-template-columns: 1fr;
+      }
+
+      .qr-placeholder {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 22px, 1120px);
+      }
+
+      .hero-main,
+      .status-card,
+      .process-card,
+      .search-box,
+      .vendor-card,
+      .timeline-card,
+      .qr-box {
+        border-radius: 18px;
+      }
+
+      .nav a {
+        padding: 6px 9px;
+      }
+
+      .update-badge {
+        left: 14px;
+        right: 14px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">油</div>
+        <span>中聯油脂案懶人包</span>
+      </div>
+      <nav class="nav" aria-label="主選單">
+        <a href="#rule">退換貨原則</a>
+        <a href="#search">批號搜尋</a>
+        <a href="#refund">退換貨方式</a>
+        <a href="#downstream">下游業者</a>
+        <a href="#timeline">時間軸</a>
+        <a href="#sources">官方連結</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <div>
+            <div class="eyebrow">台中市民向｜非官方整理｜持續更新</div>
+            <h1>中聯油脂案<br>問題油品查詢懶人包</h1>
+            <p>整理問題油品品項與批號、供應商與通路退換貨方式，以及中央與台中市政府處理進度。實際資訊仍以官方公告與業者公告為準。</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#search">🔎 立即查批號</a>
+            <a class="btn btn-accent" href="#refund">↩ 看退換貨方式</a>
+            <a class="btn btn-primary" href="#timeline">🕒 看事件時間軸</a>
+          </div>
+        </div>
+
+        <div class="status-panel">
+          <div class="status-card">
+            <strong>最後更新</strong>
+            <div class="big" id="lastUpdated">2026/07/07</div>
+            <span class="tag tag-blue">已匯入30筆問題油品</span>
+          </div>
+          <div class="status-card">
+            <strong>目前整理重點</strong>
+            <p>問題油品品項與批號、供應商與通路退換貨方式、中央與台中市政府處理時序。</p>
+          </div>
+          <div class="notice">
+            ⚠️ 本頁為非官方懶人包，請以食藥署、臺中市政府及各業者公告為準。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rule">
+      <div class="container">
+        <div class="section-head">
+          <h2>退換貨怎麼辦？先看這兩種情況</h2>
+          <p>第一版先用最簡單的判斷方式，讓民眾快速知道要找誰。</p>
+        </div>
+
+        <div class="cards-2">
+          <article class="process-card">
+            <h3>原則：找原通路商</h3>
+            <span class="tag tag-green">有購買憑證＋有商品</span>
+            <div class="steps">
+              <div class="step"><div class="step-icon">🧾</div><div>準備發票、訂單紀錄或購買證明</div></div>
+              <div class="arrow">↓</div>
+              <div class="step"><div class="step-icon">🛢️</div><div>保留商品、包裝、批號或照片</div></div>
+              <div class="arrow">↓</div>
+              <div class="step"><div class="step-icon">🏪</div><div>回原購買通路辦理退換貨</div></div>
+            </div>
+            <p>建議先確認原購買通路的公告、客服方式與退換貨期限。</p>
+          </article>
+
+          <article class="process-card exception">
+            <h3>例外：找製造商</h3>
+            <span class="tag tag-red">無購買憑證＋有商品</span>
+            <div class="steps">
+              <div class="step"><div class="step-icon">❓</div><div>找不到發票或訂單資料</div></div>
+              <div class="arrow">↓</div>
+              <div class="step"><div class="step-icon">🔢</div><div>仍保留商品、包裝或批號</div></div>
+              <div class="arrow">↓</div>
+              <div class="step"><div class="step-icon">☎️</div><div>洽製造商客服確認處理方式</div></div>
+            </div>
+            <p>若商品是分裝、散裝或標示不清，建議拍照留存後再詢問客服或通路。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="search">
+      <div class="container">
+        <div class="section-head">
+          <h2>問題油品品項與批號搜尋</h2>
+          <p>輸入批號、品名、品牌或業者名稱即可搜尋。資料可在下方 JavaScript 陣列中持續更新。</p>
+        </div>
+
+        <div class="search-box">
+          <div class="search-row">
+            <input id="searchInput" type="search" placeholder="請輸入批號、品名、品牌或業者，例如：315-1150404" />
+            <button class="btn btn-accent" id="clearBtn" type="button">清除搜尋</button>
+          </div>
+          <div class="results-count" id="resultCount"></div>
+          <div class="empty" id="emptyMsg">目前沒有找到相符資料，請確認批號或等待資料更新。</div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>品牌 / 業者</th>
+                  <th>品名</th>
+                  <th>批號</th>
+                  <th>製造日期</th>
+                  <th>有效日期</th>
+                  <th>狀態</th>
+                  <th>資料來源</th>
+                </tr>
+              </thead>
+              <tbody id="oilTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="refund">
+      <div class="container">
+        <div class="section-head">
+          <h2>供應商、實體通路、網路通路退換貨方式</h2>
+          <p>可依業者公告陸續新增。第一版先提供資料卡，後續可改為 Google Sheet 自動同步。</p>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab-btn active" data-type="製造商">供應商 / 製造商</button>
+          <button class="tab-btn" data-type="實體通路">實體通路</button>
+          <button class="tab-btn" data-type="網路通路">網路通路</button>
+        </div>
+
+        <div class="vendor-grid" id="vendorGrid"></div>
+      </div>
+    </section>
+
+
+    <section id="downstream">
+      <div class="container">
+        <div class="section-head">
+          <h2>食藥署下游業者清單</h2>
+          <p>依縣市下拉查看，不做搜尋；本區作為資訊整理，正式內容仍以食藥署原始清單為準。</p>
+        </div>
+
+        <div class="downstream-box">
+          <div class="downstream-controls">
+            <label>
+              <strong>選擇縣市</strong>
+              <select id="citySelect" aria-label="選擇縣市"></select>
+            </label>
+            <div class="city-summary" id="citySummary"></div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>序號</th>
+                  <th>縣市</th>
+                  <th>業者</th>
+                  <th>品項</th>
+                  <th>批號</th>
+                  <th>有效日期</th>
+                </tr>
+              </thead>
+              <tbody id="downstreamTableBody"></tbody>
+            </table>
+          </div>
+
+          <div class="downstream-note">
+            本版先修正下拉功能與版面呈現。PDF 原始清單共 360 家，部分資料跨頁、跨列，若需完整正式名單，建議下一階段改用 CSV / Google Sheet 維護，避免人工轉寫錯誤。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="container">
+        <div class="section-head">
+          <h2>中央與台中市處理時間軸</h2>
+          <p>用由上而下的方式整理事件進度，方便民眾了解每個時間點做了什麼。</p>
+        </div>
+
+        <div class="timeline" id="timelineList"></div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="container">
+        <div class="section-head">
+          <h2>官方資訊連結</h2>
+          <p>正式資訊請以官方公告為準，以下連結可直接點選查看。</p>
+        </div>
+
+        <div class="official-link-grid">
+          <div class="official-link-card">
+            <span class="tag tag-blue">食藥署</span>
+            <h3>食藥署「中聯油脂專區」</h3>
+            <p>查看中央公布之產品清冊、下架回收與相關公告。</p>
+            <a class="official-url" href="https://www.fda.gov.tw/tc/site.aspx?sid=13702&r=1711217385" target="_blank" rel="noopener">
+              https://www.fda.gov.tw/tc/site.aspx?sid=13702&r=1711217385
+            </a>
+            <a class="btn btn-primary" href="https://www.fda.gov.tw/tc/site.aspx?sid=13702&r=1711217385" target="_blank" rel="noopener">開啟食藥署專區</a>
+          </div>
+
+          <div class="official-link-card">
+            <span class="tag tag-red">臺中市政府</span>
+            <h3>臺中市政府「問題油品資訊專區」</h3>
+            <p>查看台中市政府公布之問題油品資訊、清冊與相關新聞。</p>
+            <a class="official-url" href="https://www.taichung.gov.tw/1630364/3313371" target="_blank" rel="noopener">
+              https://www.taichung.gov.tw/1630364/3313371
+            </a>
+            <a class="btn btn-primary" href="https://www.taichung.gov.tw/1630364/3313371" target="_blank" rel="noopener">開啟臺中市專區</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="update-badge">🔄 持續更新</div>
+
+  <footer>
+    <div class="container">
+      <p>本頁為民間整理之非官方懶人包，資訊以衛福部食藥署、臺中市政府及各業者公告為準。</p>
+      <p>資料來源：食藥署、臺中市政府、各業者公告｜品項清冊：臺中市政府115.07.06版，共30筆｜製作方向：台中市民查詢使用</p>
+    </div>
+  </footer>
+
+  <script>
+    // ============================================================
+    //  1. 問題油品資料：之後主要更新這裡
+    // ============================================================
+    const oilItems = [
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 3L",
+            "batchNo": "C1140426K",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.13",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 3L",
+            "batchNo": "C1160426K",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.15",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2140426O",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.13",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2140426P",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.13",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2150426O",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.14",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2150426P",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.14",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2160426O",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.15",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2160426P",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.15",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C22104260",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.20",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽健味香油 3L",
+            "batchNo": "BL150426L",
+            "manufactureDate": "-",
+            "expiryDate": "2028.04.05",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽健味香油 3L",
+            "batchNo": "BL240426L",
+            "manufactureDate": "-",
+            "expiryDate": "2028.04.19",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福壽實業股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "315-1150404",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.03",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康大豆沙拉油 18L",
+            "batchNo": "20270410000407",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.10",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康大豆沙拉油 18L",
+            "batchNo": "20270411000408",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.11",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康大豆沙拉油 18KG",
+            "batchNo": "20270413000408",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.13",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康烹調油 18L",
+            "batchNo": "20270413000403",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.13",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康烹調油 18L",
+            "batchNo": "20270414000403",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.14",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福懋油脂股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "202604081315",
+            "manufactureDate": "-",
+            "expiryDate": "2026.10.04",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福懋油脂股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "202604091315",
+            "manufactureDate": "-",
+            "expiryDate": "2026.10.04",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "福懋油脂股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "202604101315",
+            "manufactureDate": "-",
+            "expiryDate": "2026.10.04",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "金酥耐炸油 18L",
+            "batchNo": "2027040801",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.08",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "沙拉油 18L",
+            "batchNo": "2027040901",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.09",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "環保鐵桶沙拉油 18kg",
+            "batchNo": "2027040901",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.09",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "泰山不飽和大豆沙拉油 2.6L*6 入(新版)",
+            "batchNo": "2027040901",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.09",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "泰山精選蔬菜油 3L*6",
+            "batchNo": "2027072506",
+            "manufactureDate": "-",
+            "expiryDate": "2027.07.25",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "泰山好理調合油 2L*6",
+            "batchNo": "2027072506",
+            "manufactureDate": "-",
+            "expiryDate": "2027.07.25",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "泰山大豆沙拉油 0.6L*12 入(新版)",
+            "batchNo": "2027041301",
+            "manufactureDate": "-",
+            "expiryDate": "2027.04.13",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "泰山歐式果實精華調合油 1.5L*6 入",
+            "batchNo": "2027101301",
+            "manufactureDate": "-",
+            "expiryDate": "2027.10.13",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "泰山好理調合油 0.6L*24",
+            "batchNo": "2027072504",
+            "manufactureDate": "-",
+            "expiryDate": "2027.07.25",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      },
+      {
+            "brand": "泰山企業股份有限公司",
+            "productName": "泰山花生風味調和油 2L*6 入",
+            "batchNo": "2027100901",
+            "manufactureDate": "-",
+            "expiryDate": "2027.10.09",
+            "status": "問題批號",
+            "source": "臺中市政府清冊115.07.06"
+      }
+];
+
+    // ============================================================
+    //  2. 退換貨資料：可新增製造商、實體通路、網路通路
+    // ============================================================
+    const refundList = [
+      {
+            "type": "製造商",
+            "name": "福壽實業",
+            "item": "依業者公告之受影響品項",
+            "method": "依業者公告辦理退換貨",
+            "phone": "0800-236699",
+            "needReceipt": "依公告為準",
+            "status": "已公告",
+            "updatedAt": "2026/07/01",
+            "source": "官方 / 業者公告",
+            "url": ""
+      },
+      {
+            "type": "製造商",
+            "name": "福懋油脂",
+            "item": "依業者公告之受影響品項",
+            "method": "依業者公告辦理退換貨",
+            "phone": "0800-888255",
+            "needReceipt": "依公告為準",
+            "status": "已公告",
+            "updatedAt": "2026/07/01",
+            "source": "官方 / 業者公告",
+            "url": ""
+      },
+      {
+            "type": "製造商",
+            "name": "泰山企業",
+            "item": "依業者公告之受影響品項",
+            "method": "依業者公告辦理退換貨",
+            "phone": "0800-079080 / (02)2506-4152",
+            "needReceipt": "依公告為準",
+            "status": "已公告",
+            "updatedAt": "2026/07/01",
+            "source": "官方 / 業者公告",
+            "url": "https://www.taisun.com.tw/30718/"
+      },
+      {
+            "type": "實體通路",
+            "name": "全聯",
+            "item": "依全聯公告之受影響商品",
+            "method": "憑發票辦理；建議回原購買門市或洽客服確認。",
+            "phone": "依通路客服",
+            "needReceipt": "憑發票",
+            "status": "已公告",
+            "updatedAt": "2026/07/06",
+            "source": "全聯公告",
+            "url": "https://www.pxmart.com.tw/bulletin/announcement/267"
+      },
+      {
+            "type": "實體通路",
+            "name": "大全聯",
+            "item": "依大全聯公告之受影響商品",
+            "method": "憑發票辦理；建議回原購買門市或洽客服確認。",
+            "phone": "依通路客服",
+            "needReceipt": "憑發票",
+            "status": "已公告",
+            "updatedAt": "2026/07/06",
+            "source": "大全聯公告",
+            "url": "https://www.pxmart.com.tw/mega/news/bulletin/64"
+      },
+      {
+            "type": "實體通路",
+            "name": "萬家福及樂家康",
+            "item": "依業者提供資訊之受影響商品",
+            "method": "憑發票及商品辦理退貨；建議先洽原購買門市確認。",
+            "phone": "依業者客服",
+            "needReceipt": "憑發票及商品",
+            "status": "已確認",
+            "updatedAt": "2026/07/07",
+            "source": "洽業者提供資訊",
+            "url": ""
+      },
+      {
+            "type": "實體通路",
+            "name": "愛買",
+            "item": "泰山不飽和沙拉油 2.6 公升、泰山沙拉油 600 毫升、泰山花生風味調合油 2 公升",
+            "method": "已預防性下架 3 項商品；消費者持購買發票及商品，可到原購買門市辦理退貨。",
+            "phone": "依門市客服",
+            "needReceipt": "憑發票及商品",
+            "status": "已下架 / 可退貨",
+            "updatedAt": "2026/07/06",
+            "source": "洽業者提供資訊",
+            "url": ""
+      },
+      {
+            "type": "實體通路",
+            "name": "美廉社",
+            "item": "泰山沙拉油 2.6 公升",
+            "method": "已預防性下架並停止販售；消費者憑發票及商品，可到門市辦理退貨。",
+            "phone": "依門市客服",
+            "needReceipt": "憑發票及商品",
+            "status": "已下架 / 可退貨",
+            "updatedAt": "2026/07/06",
+            "source": "洽業者提供資訊",
+            "url": ""
+      },
+      {
+            "type": "實體通路",
+            "name": "OK 超商",
+            "item": "泰山大豆沙拉油",
+            "method": "已第一時間下架、停售；後續配合供應商及主管機關處理。消費者憑發票及商品可到門市辦理退費。",
+            "phone": "依門市客服",
+            "needReceipt": "憑發票及商品",
+            "status": "已下架 / 可退費",
+            "updatedAt": "2026/07/06",
+            "source": "洽業者提供資訊",
+            "url": ""
+      },
+      {
+            "type": "網路通路",
+            "name": "momo",
+            "item": "泰山沙拉油商品品號 12893362、3932825、9965407、3981401、8917732、4159838、9774720；購買日期 2026/4/1-6/30",
+            "method": "消費者可依購買憑證或商品填寫表單申請。momo 說明福壽大豆沙拉油未流入網購平台；如仍有疑慮可洽原廠客服。泰山相關商品可洽泰山官方客服協助回收或退費。",
+            "phone": "泰山：0800-079080 / (02)2506-4152；福壽：0800-004247；泰山 Line：@泰山食品；福壽 Line：@gma0641s",
+            "needReceipt": "憑購買憑證或商品填寫表單",
+            "status": "已提供申請表單",
+            "updatedAt": "2026/07/06",
+            "source": "momo 小幫手",
+            "url": "https://forms.gle/9rnmkxBZXuFSoeHF7"
+      },
+      {
+            "type": "網路通路",
+            "name": "蝦皮",
+            "item": "以泰山食品相關商品為例，依訂單時間、商品是否留存及是否在影響名單內判斷",
+            "method": "商品有留存且仍在鑑賞期內，可依平台流程申請退貨退款；商品未留存或 2026 年 4 月起訂單，可依泰山原廠表單申請退款；2026 年 4 月前訂單或非影響名單內商品，建議參考泰山原廠聲明。",
+            "phone": "依蝦皮客服 / 泰山客服",
+            "needReceipt": "依平台訂單及原廠表單",
+            "status": "客服引導回覆",
+            "updatedAt": "2026/07/06",
+            "source": "蝦皮電郵回覆資料",
+            "url": "https://forms.gle/9rnmkxBZXuFSoeHF7"
+      },
+      {
+            "type": "網路通路",
+            "name": "酷澎",
+            "item": "本次事件主管機關公告之沙拉油產品",
+            "method": "酷澎表示確認沙拉油產品資訊與對應購買清單後，第一時間針對受影響顧客主動發送簡訊 SMS 通知，並提供主動退款，免除消費者額外申請或寄回商品負擔。",
+            "phone": "依酷澎客服",
+            "needReceipt": "主動退款，依平台通知",
+            "status": "主動退款",
+            "updatedAt": "2026/07/06",
+            "source": "酷澎電郵回覆資料",
+            "url": ""
+      }
+];
+
+    // ============================================================
+    //  3. 時間軸資料：中央及台中市進度
+    // ============================================================
+    const timelineData = [
+      {
+        date: "2026/06/30",
+        unit: "台中市",
+        title: "接獲通報並啟動聯合稽查",
+        content: "台中市食安處獲報後，會同中央單位追查問題油品流向與相關業者。"
+      },
+      {
+        date: "2026/07/01",
+        unit: "台中市",
+        title: "要求停止產線、停止出貨並啟動下架回收",
+        content: "針對問題油品流向，要求業者停止相關產線及出貨，並配合後續下架回收。"
+      },
+      {
+        date: "2026/07/03",
+        unit: "中央",
+        title: "第一層產品要求完成下架",
+        content: "中央要求第一層受影響產品依期限完成下架，並由地方政府追蹤回報。"
+      },
+      {
+        date: "2026/07/04",
+        unit: "中央",
+        title: "擴大預防性下架範圍",
+        content: "針對使用受影響大豆沙拉油製成之部分產品，中央要求擴大預防性下架。"
+      },
+      {
+        date: "2026/07/04",
+        unit: "台中市",
+        title: "公布查核與回收進度",
+        content: "台中市持續追蹤問題油品品項、批號、流向及通路下架情形。"
+      },
+      {
+        date: "2026/07/05",
+        unit: "中央",
+        title: "公布受影響業者資訊",
+        content: "中央公布受影響業者資訊，並要求業者落實下架、揭露與地方回報。"
+      }
+    ];
+
+
+    // ============================================================
+    //  4. 食藥署下游業者資料：依縣市下拉查看
+    // ============================================================
+    const downstreamData = [
+      {
+            "no": "1",
+            "city": "基隆市",
+            "vendor": "蔡O彤",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "2",
+            "city": "基隆市",
+            "vendor": "三和行",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "3",
+            "city": "基隆市",
+            "vendor": "聯華食品工業股份有限公司-基隆",
+            "item": "一級黃豆油",
+            "batch": "202604101315",
+            "expiry": "2026.10.04"
+      },
+      {
+            "no": "4",
+            "city": "基隆市",
+            "vendor": "榮義盛行",
+            "item": "沙拉油-18L(泰山)",
+            "batch": "2027040901",
+            "expiry": "2027.04.09"
+      },
+      {
+            "no": "5",
+            "city": "基隆市",
+            "vendor": "信興油行",
+            "item": "益康烹調油(調合油)",
+            "batch": "20270413000403",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "6",
+            "city": "基隆市",
+            "vendor": "佑錡國際有限公司",
+            "item": "沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "C2140426P / C2140426O / C1140426K",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "7",
+            "city": "臺北市",
+            "vendor": "旭昇雜糧行",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2210426O",
+            "expiry": "2027.04.20"
+      },
+      {
+            "no": "8",
+            "city": "臺北市",
+            "vendor": "宏潤食品有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2210426O",
+            "expiry": "2027.04.20"
+      },
+      {
+            "no": "9",
+            "city": "臺北市",
+            "vendor": "耘群有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2210426O",
+            "expiry": "2027.04.20"
+      },
+      {
+            "no": "10",
+            "city": "臺北市",
+            "vendor": "雅培米堤食品有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2210426O",
+            "expiry": "2027.04.20"
+      },
+      {
+            "no": "11",
+            "city": "臺北市",
+            "vendor": "南僑油脂事業股份有限公司",
+            "item": "一級黃豆油",
+            "batch": "315-1150404",
+            "expiry": "115.9.30"
+      },
+      {
+            "no": "12",
+            "city": "臺北市",
+            "vendor": "裕興食品有限公司",
+            "item": "沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "C2140426O / C1140426K",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "13",
+            "city": "臺北市",
+            "vendor": "國防部福利事業管理處",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2140426O",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "14",
+            "city": "臺北市",
+            "vendor": "富暘食品有限公司",
+            "item": "健味香油 3L",
+            "batch": "BL240426L",
+            "expiry": "2028.04.19"
+      },
+      {
+            "no": "15",
+            "city": "臺北市",
+            "vendor": "晨皓食品貿易有限公司",
+            "item": "益康烹調油(調合油)",
+            "batch": "20270414000403",
+            "expiry": "2027.04.14"
+      },
+      {
+            "no": "16",
+            "city": "臺北市",
+            "vendor": "故宮晶華股份有限公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "17",
+            "city": "臺北市",
+            "vendor": "勤穩貿易有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2150426O",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "18",
+            "city": "臺北市",
+            "vendor": "新祥紀食品有限公司",
+            "item": "健味香油 3L、沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "BL240426L / C2160426O / C1160426K",
+            "expiry": "2027.04.15 / 2028.04.19"
+      },
+      {
+            "no": "19",
+            "city": "臺北市",
+            "vendor": "晶華國際酒店股份有限公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "20",
+            "city": "臺北市",
+            "vendor": "德諱興業有限公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "21",
+            "city": "臺北市",
+            "vendor": "康達盛通生活事業股份有限公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "22",
+            "city": "臺北市",
+            "vendor": "隆欣雜糧行(李O憲)",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2160426O",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "23",
+            "city": "臺北市",
+            "vendor": "暉利實業有限公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "24",
+            "city": "臺北市",
+            "vendor": "邢O玲",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2150426O",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "25",
+            "city": "臺北市",
+            "vendor": "聯友食品免洗有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2150426O / C2160426O",
+            "expiry": "2027.04.14 / 2027.04.15"
+      },
+      {
+            "no": "26",
+            "city": "臺北市",
+            "vendor": "周O青",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "156",
+            "city": "臺中市",
+            "vendor": "勝薪商行",
+            "item": "泰山好理調合油-2L*6、泰山花生風味調和油2L*6入",
+            "batch": "2027072506 / 2027100901",
+            "expiry": "2027.07.25 / 2027.10.09"
+      },
+      {
+            "no": "157",
+            "city": "臺中市",
+            "vendor": "志達實業股份有限公司",
+            "item": "金酥耐炸油-18L",
+            "batch": "2027040801",
+            "expiry": "2027.04.08"
+      },
+      {
+            "no": "158",
+            "city": "臺中市",
+            "vendor": "好樂迪大里店",
+            "item": "金酥耐炸油-18L",
+            "batch": "2027040801",
+            "expiry": "2027.04.08"
+      },
+      {
+            "no": "159",
+            "city": "臺中市",
+            "vendor": "侑嘉詮企業有限公司",
+            "item": "益康烹調油(調合油)",
+            "batch": "20270413000403",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "160",
+            "city": "臺中市",
+            "vendor": "津華食品有限公司",
+            "item": "健味香油 3L",
+            "batch": "BL240426L",
+            "expiry": "2028.04.19"
+      },
+      {
+            "no": "161",
+            "city": "臺中市",
+            "vendor": "怡饗美食股份有限公司",
+            "item": "健味香油 3L",
+            "batch": "BL240426L",
+            "expiry": "2028.04.19"
+      },
+      {
+            "no": "162",
+            "city": "臺中市",
+            "vendor": "福壽實業股份有限公司",
+            "item": "健味香油 3L、沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "BL240426L / C2140426O / C2160426O / C1140426K",
+            "expiry": "2027.04.13 / 2027.04.15 / 2028.04.19"
+      },
+      {
+            "no": "163",
+            "city": "臺中市",
+            "vendor": "群用企業有限公司",
+            "item": "沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "C2140426O / C2210426O / C1160426K",
+            "expiry": "2027.04.13 / 2027.04.20 / 2027.04.15"
+      },
+      {
+            "no": "164",
+            "city": "臺中市",
+            "vendor": "新生活興業有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2140426P",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "165",
+            "city": "臺中市",
+            "vendor": "永逸富有限公司",
+            "item": "沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "C2140426P / C1140426K",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "166",
+            "city": "臺中市",
+            "vendor": "賴O聖",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2140426O",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "167",
+            "city": "臺中市",
+            "vendor": "陳O萍",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2140426O / C2140426P",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "168",
+            "city": "臺中市",
+            "vendor": "台邑餐飲有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2210426O",
+            "expiry": "2027.04.20"
+      },
+      {
+            "no": "169",
+            "city": "臺中市",
+            "vendor": "寶喆食品有限公司",
+            "item": "益康烹調油(調合油)",
+            "batch": "20270414000403",
+            "expiry": "2027.04.14"
+      },
+      {
+            "no": "170",
+            "city": "臺中市",
+            "vendor": "和岱有限公司",
+            "item": "健味香油 3L",
+            "batch": "BL150426L / BL240426L",
+            "expiry": "2028.04.05 / 2028.04.19"
+      },
+      {
+            "no": "171",
+            "city": "臺中市",
+            "vendor": "品欣食品商行",
+            "item": "益康烹調油(調合油)",
+            "batch": "20270414000403",
+            "expiry": "2027.04.14"
+      },
+      {
+            "no": "172",
+            "city": "臺中市",
+            "vendor": "明昱商行",
+            "item": "益康烹調油(調合油)",
+            "batch": "20270413000403",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "173",
+            "city": "臺中市",
+            "vendor": "巨盛洋行",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "174",
+            "city": "臺中市",
+            "vendor": "美升鮮台中倉",
+            "item": "沙拉油-18L(泰山)",
+            "batch": "2027040901",
+            "expiry": "2027.04.09"
+      },
+      {
+            "no": "175",
+            "city": "臺中市",
+            "vendor": "億錦德商行",
+            "item": "環保鐵桶沙拉油-18Kg",
+            "batch": "2027040901",
+            "expiry": "2027.04.09"
+      },
+      {
+            "no": "176",
+            "city": "臺中市",
+            "vendor": "連興油行",
+            "item": "金酥耐炸油-18L、環保鐵桶沙拉油-18Kg、沙拉油-18L(泰山)、益康大豆沙拉油 18L、沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "2027040801 / 2027040901 / 20270410000407 / C2160426O / C1160426K",
+            "expiry": "2027.04.08 / 2027.04.09 / 2027.04.10 / 2027.04.15"
+      },
+      {
+            "no": "177",
+            "city": "臺中市",
+            "vendor": "鴻昌商行倉庫",
+            "item": "泰山大豆沙拉油0.6L*12入(新版)",
+            "batch": "2027041301",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "178",
+            "city": "臺中市",
+            "vendor": "金食在食材有限公司",
+            "item": "沙拉油-18L(泰山)、沙拉油－塑桶 3L、益康大豆沙拉油 18L、環保鐵桶沙拉油-18Kg",
+            "batch": "2027040901 / C1160426K / 20270410000407",
+            "expiry": "2027.04.09 / 2027.04.15 / 2027.04.10"
+      },
+      {
+            "no": "179",
+            "city": "臺中市",
+            "vendor": "茗洋企業有限公司",
+            "item": "泰山不飽和大豆沙拉油2.6L*6入(新版)、泰山精選蔬菜油-3L*6、泰山花生風味調和油2L*6入、泰山好理調合油0.6L*24、泰山好理調合油-2L*6",
+            "batch": "2027040901 / 2027072506 / 2027100901 / 2027072504",
+            "expiry": "2027.04.09 / 2027.07.25 / 2027.10.09"
+      },
+      {
+            "no": "180",
+            "city": "臺中市",
+            "vendor": "弘達流通(股)公司-梧棲倉",
+            "item": "泰山不飽和大豆沙拉油2.6L*6入(新版)、泰山花生風味調和油2L*6入、泰山大豆沙拉油0.6L*12入(新版)",
+            "batch": "2027040901 / 2027100901 / 2027041301",
+            "expiry": "2027.04.09 / 2027.10.09 / 2027.04.13"
+      },
+      {
+            "no": "181",
+            "city": "臺中市",
+            "vendor": "今春企業股份有限公司",
+            "item": "泰山不飽和大豆沙拉油2.6L*6入(新版)、泰山花生風味調和油2L*6入、泰山大豆沙拉油0.6L*12入(新版)",
+            "batch": "2027040901 / 2027100901 / 2027041301",
+            "expiry": "2027.04.09 / 2027.10.09 / 2027.04.13"
+      },
+      {
+            "no": "182",
+            "city": "臺中市",
+            "vendor": "森御盒膳股份有限公司",
+            "item": "一級黃豆油",
+            "batch": "202604091315",
+            "expiry": "2026.10.04"
+      },
+      {
+            "no": "183",
+            "city": "臺中市",
+            "vendor": "永順豐商行",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "184",
+            "city": "臺中市",
+            "vendor": "張O棟",
+            "item": "益康大豆沙拉油 18KG",
+            "batch": "20270413000408",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "185",
+            "city": "臺中市",
+            "vendor": "富達食品有限公司",
+            "item": "益康大豆沙拉油 18KG",
+            "batch": "20270413000408",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "186",
+            "city": "臺中市",
+            "vendor": "仁偉商行",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2160426O",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "187",
+            "city": "臺中市",
+            "vendor": "米谷食品有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2160426O",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "188",
+            "city": "臺中市",
+            "vendor": "味源股份有限公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "189",
+            "city": "臺中市",
+            "vendor": "大買家股份有限公司大里國光分公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "190",
+            "city": "臺中市",
+            "vendor": "長鑫商行",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "191",
+            "city": "臺中市",
+            "vendor": "頂裕食品股份有限公司",
+            "item": "益康大豆沙拉油 18KG",
+            "batch": "20270413000408",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "192",
+            "city": "臺中市",
+            "vendor": "國成食品有限公司",
+            "item": "沙拉油－塑桶 3L",
+            "batch": "C1160426K",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "193",
+            "city": "臺中市",
+            "vendor": "聯發商行",
+            "item": "泰山大豆沙拉油0.6L*12入(新版)",
+            "batch": "2027041301",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "194",
+            "city": "臺中市",
+            "vendor": "詠益商行",
+            "item": "沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "C2160426O / C1160426K",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "195",
+            "city": "臺中市",
+            "vendor": "旭安國際有限公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407 / 20270411000408",
+            "expiry": "2027.04.10 / 2027.04.11"
+      },
+      {
+            "no": "196",
+            "city": "臺中市",
+            "vendor": "豪運商行",
+            "item": "沙拉油－塑桶 3L",
+            "batch": "C1140426K / C1160426K",
+            "expiry": "2027.04.13 / 2027.04.15"
+      },
+      {
+            "no": "197",
+            "city": "臺中市",
+            "vendor": "福大興行",
+            "item": "沙拉油－塑桶 3L、沙拉油 18L(福壽)",
+            "batch": "C1140426K / C2150426P",
+            "expiry": "2027.04.13 / 2027.04.14"
+      },
+      {
+            "no": "198",
+            "city": "臺中市",
+            "vendor": "永昌南北雜貨有限公司",
+            "item": "沙拉油－塑桶 3L、沙拉油 18L(福壽)",
+            "batch": "C1140426K / C2150426O",
+            "expiry": "2027.04.13 / 2027.04.15"
+      },
+      {
+            "no": "199",
+            "city": "臺中市",
+            "vendor": "群用企業有限公司",
+            "item": "沙拉油－塑桶 3L",
+            "batch": "C1160426K",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "200",
+            "city": "臺中市",
+            "vendor": "陳O原",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270411000408",
+            "expiry": "2027.04.11"
+      },
+      {
+            "no": "201",
+            "city": "臺中市",
+            "vendor": "竹記有限公司",
+            "item": "沙拉油－塑桶 3L、健味香油 3L、益康大豆沙拉油 18L、沙拉油 18L(福壽)",
+            "batch": "C1140426K / BL150426L / BL240426L / 20270410000407 / C2150426O",
+            "expiry": "2027.04.13 / 2028.04.05 / 2028.04.19 / 2027.04.10 / 2027.04.15"
+      },
+      {
+            "no": "202",
+            "city": "臺中市",
+            "vendor": "杰釩有限公司",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "203",
+            "city": "臺中市",
+            "vendor": "金安信食品有限公司",
+            "item": "一級黃豆油",
+            "batch": "202604091315",
+            "expiry": "2026.10.04"
+      },
+      {
+            "no": "204",
+            "city": "臺中市",
+            "vendor": "鼎鎂國際企業有限公司",
+            "item": "沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "C2150426O / C1160426K",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "205",
+            "city": "臺中市",
+            "vendor": "森沂商行有限公司",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2160426O",
+            "expiry": "2027.04.15"
+      },
+      {
+            "no": "206",
+            "city": "臺中市",
+            "vendor": "吳O泩倉庫",
+            "item": "泰山大豆沙拉油0.6L*12入(新版)",
+            "batch": "2027041301",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "207",
+            "city": "臺中市",
+            "vendor": "李O滿",
+            "item": "沙拉油 18L(福壽)、沙拉油－塑桶 3L",
+            "batch": "C2150426O / C1140426K / C1160426K",
+            "expiry": "2027.04.13 / 2027.04.15"
+      },
+      {
+            "no": "208",
+            "city": "臺中市",
+            "vendor": "廖O財",
+            "item": "益康大豆沙拉油 18KG",
+            "batch": "20270413000408",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "209",
+            "city": "臺中市",
+            "vendor": "溢鼎鱻海鮮館漁港店",
+            "item": "益康大豆沙拉油 18L",
+            "batch": "20270410000407",
+            "expiry": "2027.04.10"
+      },
+      {
+            "no": "210",
+            "city": "彰化縣",
+            "vendor": "陳O利",
+            "item": "泰山花生風味調和油2L*6入",
+            "batch": "2027100901",
+            "expiry": "2027.10.09"
+      },
+      {
+            "no": "211",
+            "city": "彰化縣",
+            "vendor": "鼎沛行銷股份有限公司",
+            "item": "泰山花生風味調和油2L*6入",
+            "batch": "2027100901",
+            "expiry": "2027.10.09"
+      },
+      {
+            "no": "212",
+            "city": "彰化縣",
+            "vendor": "喜威世流通(股)公司",
+            "item": "泰山好理調合油-2L*6、泰山花生風味調和油2L*6入",
+            "batch": "2027072506 / 2027100901",
+            "expiry": "2027.07.25 / 2027.10.09"
+      },
+      {
+            "no": "213",
+            "city": "彰化縣",
+            "vendor": "員林-廖小姐(員林會址)",
+            "item": "泰山花生風味調和油2L*6入",
+            "batch": "2027100901",
+            "expiry": "2027.10.09"
+      },
+      {
+            "no": "214",
+            "city": "彰化縣",
+            "vendor": "旺旺商行",
+            "item": "泰山花生風味調和油2L*6入",
+            "batch": "2027100901",
+            "expiry": "2027.10.09"
+      },
+      {
+            "no": "215",
+            "city": "彰化縣",
+            "vendor": "林O龍",
+            "item": "金酥耐炸油-18L",
+            "batch": "2027040801",
+            "expiry": "2027.04.08"
+      },
+      {
+            "no": "216",
+            "city": "彰化縣",
+            "vendor": "和多利企業股份有限公司",
+            "item": "泰山花生風味調和油2L*6入",
+            "batch": "2027100901",
+            "expiry": "2027.10.09"
+      },
+      {
+            "no": "217",
+            "city": "彰化縣",
+            "vendor": "吳O樹",
+            "item": "泰山花生風味調和油2L*6入",
+            "batch": "2027100901",
+            "expiry": "2027.10.09"
+      },
+      {
+            "no": "218",
+            "city": "彰化縣",
+            "vendor": "好樂迪彰化店",
+            "item": "金酥耐炸油-18L",
+            "batch": "2027040801",
+            "expiry": "2027.04.08"
+      },
+      {
+            "no": "219",
+            "city": "彰化縣",
+            "vendor": "蕭O虎",
+            "item": "泰山花生風味調和油2L*6入",
+            "batch": "2027100901",
+            "expiry": "2027.10.09"
+      },
+      {
+            "no": "220",
+            "city": "彰化縣",
+            "vendor": "黃O以",
+            "item": "益康烹調油(調合油)",
+            "batch": "20270413000403",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "221",
+            "city": "彰化縣",
+            "vendor": "潔香行",
+            "item": "益康烹調油(調合油)、沙拉油-18L(泰山)",
+            "batch": "20270413000403 / 2027040901",
+            "expiry": "2027.04.13 / 2027.04.09"
+      },
+      {
+            "no": "222",
+            "city": "彰化縣",
+            "vendor": "劉O輝",
+            "item": "沙拉油 18L(福壽)",
+            "batch": "C2140426O",
+            "expiry": "2027.04.13"
+      },
+      {
+            "no": "223",
+            "city": "彰化縣",
+            "vendor": "帝一好行銷有限公司",
+            "item": "沙拉油 18L(福壽)、沙拉油－塑桶 3L、泰山不飽和大豆沙拉油2.6L*6入(新版)",
+            "batch": "C2140426P / C1140426K / 2027040901",
+            "expiry": "2027.04.13 / 2027.04.09"
+      },
+      {
+            "no": "-",
+            "city": "新北市",
+            "vendor": "資料很多，建議下一階段完整匯入CSV",
+            "item": "本版先保留縣市入口，避免表格錯亂；正式資料請以食藥署PDF為準。",
+            "batch": "-",
+            "expiry": "-"
+      },
+      {
+            "no": "-",
+            "city": "桃園市",
+            "vendor": "資料很多，建議下一階段完整匯入CSV",
+            "item": "本版先保留縣市入口，避免表格錯亂；正式資料請以食藥署PDF為準。",
+            "batch": "-",
+            "expiry": "-"
+      },
+      {
+            "no": "-",
+            "city": "新竹市",
+            "vendor": "資料很多，建議下一階段完整匯入CSV",
+            "item": "本版先保留縣市入口，避免表格錯亂；正式資料請以食藥署PDF為準。",
+            "batch": "-",
+            "expiry": "-"
+      },
+      {
+            "no": "-",
+            "city": "新竹縣",
+            "vendor": "資料很多，建議下一階段完整匯入CSV",
+            "item": "本版先保留縣市入口，避免表格錯亂；正式資料請以食藥署PDF為準。",
+            "batch": "-",
+            "expiry": "-"
+      },
+      {
+            "no": "-",
+            "city": "苗栗縣",
+            "vendor": "資料很多，建議下一階段完整匯入CSV",
+            "item": "本版先保留縣市入口，避免表格錯亂；正式資料請以食藥署PDF為準。",
+            "batch": "-",
+            "expiry": "-"
+      }
+];
+
+    // ============================================================
+    //  畫面渲染功能
+    // ============================================================
+    const oilTableBody = document.getElementById("oilTableBody");
+    const searchInput = document.getElementById("searchInput");
+    const resultCount = document.getElementById("resultCount");
+    const emptyMsg = document.getElementById("emptyMsg");
+    const clearBtn = document.getElementById("clearBtn");
+    const vendorGrid = document.getElementById("vendorGrid");
+    const timelineList = document.getElementById("timelineList");
+    const citySelect = document.getElementById("citySelect");
+    const citySummary = document.getElementById("citySummary");
+    const downstreamTableBody = document.getElementById("downstreamTableBody");
+
+    function getStatusTag(status) {
+      if (status.includes("問題")) return "tag tag-red";
+      if (status.includes("已")) return "tag tag-green";
+      if (status.includes("更新")) return "tag tag-blue";
+      return "tag tag-gray";
+    }
+
+    function renderOilItems(keyword = "") {
+      const key = keyword.trim().toLowerCase();
+
+      const filtered = oilItems.filter(item => {
+        return [
+          item.brand,
+          item.productName,
+          item.batchNo,
+          item.manufactureDate,
+          item.expiryDate,
+          item.status,
+          item.source
+        ].some(value => String(value).toLowerCase().includes(key));
+      });
+
+      oilTableBody.innerHTML = filtered.map(item => `
+        <tr>
+          <td>${item.brand}</td>
+          <td>${item.productName}</td>
+          <td><strong>${item.batchNo}</strong></td>
+          <td>${item.manufactureDate}</td>
+          <td>${item.expiryDate}</td>
+          <td><span class="${getStatusTag(item.status)}">${item.status}</span></td>
+          <td>${item.source}</td>
+        </tr>
+      `).join("");
+
+      resultCount.textContent = key
+        ? `搜尋結果：共 ${filtered.length} 筆`
+        : `目前清冊：共 ${oilItems.length} 筆`;
+
+      emptyMsg.style.display = filtered.length ? "none" : "block";
+    }
+
+    function renderVendors(type = "製造商") {
+      const filtered = refundList.filter(item => item.type === type);
+
+      vendorGrid.innerHTML = filtered.map(item => `
+        <article class="vendor-card">
+          <span class="${getStatusTag(item.status)}">${item.status}</span>
+          <h3>${item.name}</h3>
+          <p><strong>適用品項：</strong>${item.item}</p>
+          <p><strong>處理方式：</strong>${item.method}</p>
+          <p><strong>購買憑證：</strong>${item.needReceipt}</p>
+          <p class="phone">${item.phone}</p>
+          <p><strong>資料來源：</strong>${item.source || "依公告為準"}</p>
+          ${item.url ? `<p><a class="official-url" href="${item.url}" target="_blank" rel="noopener">查看資料來源 / 申請表單</a></p>` : ""}
+          <p><small>查詢時間：${item.updatedAt}</small></p>
+        </article>
+      `).join("");
+    }
+
+
+    function renderDownstream(city = "臺中市") {
+      if (!citySelect || !downstreamTableBody || !citySummary) return;
+
+      const cities = Array.from(new Set(downstreamData.map(item => item.city)));
+      if (!citySelect.dataset.ready) {
+        citySelect.innerHTML = cities.map(c => `<option value="${c}">${c}</option>`).join("");
+        citySelect.dataset.ready = "true";
+      }
+
+      if (!cities.includes(city)) city = cities[0];
+      citySelect.value = city;
+
+      const filtered = downstreamData.filter(item => item.city === city);
+      citySummary.textContent = `${city}：目前整理 ${filtered.length} 筆。`;
+
+      downstreamTableBody.innerHTML = filtered.map(item => `
+        <tr>
+          <td>${item.no}</td>
+          <td><strong>${item.city}</strong></td>
+          <td>${item.vendor}</td>
+          <td>${item.item}</td>
+          <td><strong>${item.batch}</strong></td>
+          <td>${item.expiry}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderTimeline() {
+      timelineList.innerHTML = timelineData.map(item => `
+        <article class="timeline-item ${item.unit === "台中市" ? "taichung" : "central"}">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="tag ${item.unit === "台中市" ? "tag-red" : "tag-blue"}">${item.unit}</span>
+              <strong>${item.date}</strong>
+            </div>
+            <h3>${item.title}</h3>
+            <p>${item.content}</p>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    searchInput.addEventListener("input", e => {
+      renderOilItems(e.target.value);
+    });
+
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      renderOilItems();
+      searchInput.focus();
+    });
+
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderVendors(btn.dataset.type);
+      });
+    });
+
+    if (citySelect) {
+      citySelect.addEventListener("change", e => renderDownstream(e.target.value));
+    }
+
+    renderOilItems();
+    renderVendors();
+    renderDownstream("臺中市");
+    renderTimeline();
+  </script>
+</body>
+</html>
