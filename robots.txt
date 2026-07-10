@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rsbh7108-coder.github.io/oil/sitemap.xml
