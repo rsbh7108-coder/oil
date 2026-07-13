@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://rsbh7108-coder.github.io/oil/">
   <meta name="robots" content="index, follow">
-  <meta name="description" content="中聯油脂案非官方懶人包，提供問題油品批號、同源油品、預防性下架產品、下游業者、影響學校、退貨公告與事件時間軸查詢。">
+  <meta name="description" content="中聯油脂案非官方懶人包，提供第1至第3批問題油品批號、台糖預防性下架油品、預防性下架產品、下游業者、影響學校、退貨公告與事件時間軸查詢。">
   <meta name="keywords" content="中聯油脂,中聯油脂案,苯駢芘,大豆沙拉油,問題油品,預防性下架,下游業者,退換貨,食安事件,非官方懶人包">
   <meta name="author" content="非官方整理">
   <meta name="theme-color" content="#0f766e">
@@ -22,7 +22,7 @@
   <!-- Open Graph / Social Share Preview -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="中聯油脂案非官方懶人包｜問題油品、預防性下架、下游業者查詢">
-  <meta property="og:description" content="中聯油脂案非官方懶人包，提供問題油品批號、同源油品、預防性下架產品、下游業者、影響學校、退貨公告與事件時間軸查詢。">
+  <meta property="og:description" content="中聯油脂案非官方懶人包，提供第1至第3批問題油品批號、台糖預防性下架油品、預防性下架產品、下游業者、影響學校、退貨公告與事件時間軸查詢。">
   <meta property="og:url" content="https://rsbh7108-coder.github.io/oil/">
   <meta property="og:image" content="https://rsbh7108-coder.github.io/oil/og-cover.jpg">
   <meta property="og:image:width" content="1200">
@@ -31,7 +31,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="中聯油脂案非官方懶人包｜問題油品、預防性下架、下游業者查詢">
-  <meta name="twitter:description" content="中聯油脂案非官方懶人包，提供問題油品批號、同源油品、預防性下架產品、下游業者、影響學校、退貨公告與事件時間軸查詢。">
+  <meta name="twitter:description" content="中聯油脂案非官方懶人包，提供第1至第3批問題油品批號、台糖預防性下架油品、預防性下架產品、下游業者、影響學校、退貨公告與事件時間軸查詢。">
   <meta name="twitter:image" content="https://rsbh7108-coder.github.io/oil/og-cover.jpg">
   <script type="application/ld+json">
   {
@@ -39,7 +39,7 @@
     "@type": "WebSite",
     "name": "中聯油脂案非官方懶人包",
     "url": "https://rsbh7108-coder.github.io/oil/",
-    "description": "中聯油脂案非官方懶人包，提供問題油品批號、同源油品、預防性下架產品、下游業者、影響學校、退貨公告與事件時間軸查詢。",
+    "description": "中聯油脂案非官方懶人包，提供第1至第3批問題油品批號、台糖預防性下架油品、預防性下架產品、下游業者、影響學校、退貨公告與事件時間軸查詢。",
     "inLanguage": "zh-TW"
   }
   </script>
@@ -1215,13 +1215,13 @@
         <div class="status-panel stats-panel">
           <div class="status-card stat-card">
             <strong>問題油品</strong>
-            <div class="big">31</div>
-            <span class="tag tag-red">18項31批號｜115.07.09</span>
+            <div class="big">96</div>
+            <span class="tag tag-red">三批超標｜115.07.11</span>
           </div>
           <div class="status-card stat-card">
-            <strong>同源油品預防性下架</strong>
-            <div class="big">39</div>
-            <span class="tag tag-orange">待檢驗確認｜115.07.09</span>
+            <strong>台糖預防性下架</strong>
+            <div class="big">9項油品</div>
+            <span class="tag tag-orange">11家下游｜115.07.11</span>
           </div>
           <div class="status-card stat-card">
             <strong>退貨公告</strong>
@@ -1329,7 +1329,7 @@
 
         <div class="search-box">
           <div class="search-row">
-            <input id="searchInput" type="search" placeholder="請輸入批號、品名、產品、有效日期、業者、縣市、同源油品或學校，例如：315-1150404、泰山、飯糰、臺中市、台中一中" />
+            <input id="searchInput" type="search" placeholder="請輸入批號、品名、產品、有效日期、業者、縣市或學校，例如：315-1150404、泰山、飯糰、臺中市、台中一中" />
             <button class="btn btn-accent" id="clearBtn" type="button">清除搜尋</button>
           </div>
           <div class="results-count" id="resultCount"></div>
@@ -1352,6 +1352,46 @@
           </div>
         </div>
       </div>
+    </section>
+
+
+    <section class="section" id="taisugar">
+      <div class="section-head">
+        <div>
+          <h2>台糖預防性下架油品及下游業者</h2>
+          <p>本清冊為台糖相關油品之預防性下架品項及下游業者名單，製表日期為115年7月11日。此區為預防性下架資訊，與已確認超標問題油品分開呈現，正式內容仍以主管機關及業者公告為準。</p>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <strong>台糖 9 項含中聯油脂油品</strong>
+          <ul id="taisugarProductList"></ul>
+        </div>
+        <div class="info-card">
+          <strong>清冊摘要</strong>
+          <p>下游業者共 11 家，明細共 41 筆；可利用上方整合搜尋查詢廠商名稱、地址、品項或批號。</p>
+        </div>
+      </div>
+
+      <div class="table-box">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>序號</th>
+                <th>廠商名稱</th>
+                <th>地址</th>
+                <th>品項</th>
+                <th>批號</th>
+                <th>狀態</th>
+              </tr>
+            </thead>
+            <tbody id="taisugarTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <p class="note">來源：台糖下游業者名單，製表日期 115.07.11。此清冊為預防性下架資料，正式公告與後續異動仍請以官方資料為準。</p>
     </section>
 
 <section id="product-list">
@@ -1531,668 +1571,1444 @@
     const oilItems = [
       {
             "no": "1",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 3L",
             "batchNo": "C1140426K",
             "manufactureDate": "—",
             "expiryDate": "2027.04.13",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "2",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 3L",
             "batchNo": "C1160426K",
             "manufactureDate": "—",
             "expiryDate": "2027.04.15",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "3",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2140426O",
             "manufactureDate": "—",
             "expiryDate": "2027.04.13",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "4",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2140426P",
             "manufactureDate": "—",
             "expiryDate": "2027.04.13",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "5",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2150426O",
             "manufactureDate": "—",
             "expiryDate": "2027.04.14",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "6",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2150426P",
             "manufactureDate": "—",
             "expiryDate": "2027.04.14",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "7",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2160426O",
             "manufactureDate": "—",
             "expiryDate": "2027.04.15",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "8",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2160426P",
             "manufactureDate": "—",
             "expiryDate": "2027.04.15",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "9",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2210426O",
             "manufactureDate": "—",
             "expiryDate": "2027.04.20",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "10",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽健味香油 3L",
             "batchNo": "BL150426L",
             "manufactureDate": "—",
             "expiryDate": "2028.04.05",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "11",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "福壽健味香油 3L",
             "batchNo": "BL240426L",
             "manufactureDate": "—",
             "expiryDate": "2028.04.19",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "12",
+            "group": "第一批 315-1150404",
             "brand": "福壽實業股份有限公司",
             "productName": "一級黃豆油",
             "batchNo": "315-1150404",
             "manufactureDate": "—",
             "expiryDate": "2027.04.03",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "13",
+            "group": "第一批 315-1150404",
             "brand": "福懋油脂股份有限公司",
             "productName": "益康大豆沙拉油 18L",
             "batchNo": "20270410000407",
             "manufactureDate": "—",
             "expiryDate": "2027.04.10",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "14",
+            "group": "第一批 315-1150404",
             "brand": "福懋油脂股份有限公司",
             "productName": "益康大豆沙拉油 18L",
             "batchNo": "20270411000408",
             "manufactureDate": "—",
             "expiryDate": "2027.04.11",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "15",
+            "group": "第一批 315-1150404",
             "brand": "福懋油脂股份有限公司",
             "productName": "益康大豆沙拉油 18KG",
             "batchNo": "20270413000408",
             "manufactureDate": "—",
             "expiryDate": "2027.04.13",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "16",
+            "group": "第一批 315-1150404",
             "brand": "福懋油脂股份有限公司",
             "productName": "益康烹調油 18L",
             "batchNo": "20270413000403",
             "manufactureDate": "—",
             "expiryDate": "2027.04.13",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "17",
+            "group": "第一批 315-1150404",
             "brand": "福懋油脂股份有限公司",
             "productName": "益康烹調油 18L",
             "batchNo": "20270414000403",
             "manufactureDate": "—",
             "expiryDate": "2027.04.14",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "18",
+            "group": "第一批 315-1150404",
             "brand": "福懋油脂股份有限公司",
             "productName": "一級黃豆油",
             "batchNo": "202604081315",
             "manufactureDate": "—",
             "expiryDate": "2026.10.04",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "19",
+            "group": "第一批 315-1150404",
             "brand": "福懋油脂股份有限公司",
             "productName": "一級黃豆油",
             "batchNo": "202604091315",
             "manufactureDate": "—",
             "expiryDate": "2026.10.04",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "20",
+            "group": "第一批 315-1150404",
             "brand": "福懋油脂股份有限公司",
             "productName": "一級黃豆油",
             "batchNo": "202604101315",
             "manufactureDate": "—",
             "expiryDate": "2026.10.04",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "21",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山金酥耐炸油 18L",
             "batchNo": "20270408",
             "manufactureDate": "—",
             "expiryDate": "2027.04.08",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "22",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山沙拉油 18L",
             "batchNo": "20270409",
             "manufactureDate": "—",
             "expiryDate": "2027.04.09",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "23",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山環保鐵桶沙拉油 18KG",
             "batchNo": "20270409",
             "manufactureDate": "—",
             "expiryDate": "2027.04.09",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "24",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山不飽和大豆沙拉油 2.6L*6 入(新版)",
             "batchNo": "20270409",
             "manufactureDate": "—",
             "expiryDate": "2027.04.09",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "25",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山精選蔬菜油 3L*6",
             "batchNo": "20270725d",
             "manufactureDate": "—",
             "expiryDate": "2027.07.25",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "26",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山好理調合油 2L*6",
             "batchNo": "20270725d",
             "manufactureDate": "—",
             "expiryDate": "2027.07.25",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "27",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山大豆沙拉油 0.6L*12 入(新版)",
             "batchNo": "20270413E",
             "manufactureDate": "—",
             "expiryDate": "2027.04.13",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "28",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山歐式果實精華調合油 1.5L*6 入",
             "batchNo": "20271013",
             "manufactureDate": "—",
             "expiryDate": "2027.10.13",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "29",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山好理調合油 0.6L*24",
             "batchNo": "20270725f",
             "manufactureDate": "—",
             "expiryDate": "2027.07.25",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "30",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山好理調合油 0.6L*24",
             "batchNo": "2027072504(未出貨)",
             "manufactureDate": "—",
             "expiryDate": "2027.07.25",
             "status": "確定超標",
-            "source": "115.07.09清冊"
+            "source": "第一批確定超標｜製表115.07.09"
       },
       {
             "no": "31",
+            "group": "第一批 315-1150404",
             "brand": "泰山企業股份有限公司",
             "productName": "泰山花生風味調和油 2L*6 入",
             "batchNo": "20271009",
             "manufactureDate": "—",
             "expiryDate": "2027.10.09",
             "status": "確定超標",
-            "source": "115.07.09清冊"
-      }
-];
-
-    const relatedOilItems = [
+            "source": "第一批確定超標｜製表115.07.09"
+      },
       {
             "no": "1",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 3L",
             "batchNo": "C1250526K",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.24",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "2",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 3L",
             "batchNo": "C1260526K",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.25",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "3",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2210526O",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.20",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "4",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2220526O",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.21",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "5",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2260526P",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.25",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "6",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2260526O",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.25",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "7",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2270526P",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.26",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "8",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2270526O",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.26",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "9",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18L",
             "batchNo": "C2280526O",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.27",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "10",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽炸酥油 18Ｌ",
             "batchNo": "BL200526D",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.19",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "11",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽炸酥油 18Ｌ",
             "batchNo": "BL220526D",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.21",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "12",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽炸酥油 18Ｌ",
             "batchNo": "BL250526D",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.24",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "13",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽炸酥油 18Ｌ",
             "batchNo": "BL260526D",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.25",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "14",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽炸酥油 18Ｌ",
             "batchNo": "BL280526D",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.27",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "15",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽大豆沙拉油 18KG",
             "batchNo": "C2220526P",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.21",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "16",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "頂級香油 500g",
             "batchNo": "BL260526H(未出貨)",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.15",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "17",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "頂級香油 500g",
             "batchNo": "BL270526H",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.15",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "18",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "福壽健味香油 3L",
             "batchNo": "BL100626L",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.22",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "19",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "好味香油 200g",
             "batchNo": "BL050626H",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.21",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "20",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "好味香油 200g",
             "batchNo": "BL080626H",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.21",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "21",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "好味香油 3L",
             "batchNo": "BL030626L",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.19",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "22",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "真香芝麻香油 3L",
             "batchNo": "BL020626L",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.17",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "23",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "胡麻油 18KG",
             "batchNo": "BL250526F",
+            "manufactureDate": "—",
             "expiryDate": "2028.03.24",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "24",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "香油（全） 200g",
             "batchNo": "BS020626H",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.31",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "25",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "香油（全） 200g",
             "batchNo": "BS030626H",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.31",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "26",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "香油（全） 200g",
             "batchNo": "BS040626H",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.31",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "27",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "香油（全） 200g",
             "batchNo": "BS100626H(未出貨)",
+            "manufactureDate": "—",
             "expiryDate": "2028.06.03",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "28",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "香油（全） 200g",
             "batchNo": "BS110626H(未出貨)",
+            "manufactureDate": "—",
             "expiryDate": "2028.06.03",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "29",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "香油-A 3L",
             "batchNo": "BS040626L",
+            "manufactureDate": "—",
             "expiryDate": "2028.05.31",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "30",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "香油-A 3L",
             "batchNo": "BS050626L",
+            "manufactureDate": "—",
             "expiryDate": "2028.06.03",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "31",
-            "company": "福壽實業股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
             "productName": "香油-A 3L",
             "batchNo": "BS100626L",
+            "manufactureDate": "—",
             "expiryDate": "2028.06.03",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "32",
-            "company": "福懋油脂股份有限公司",
-            "productName": "益康大豆沙拉油 18L",
-            "batchNo": "20270525000408",
-            "expiryDate": "2027.05.25",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "group": "第二批 313-1150512",
+            "brand": "福壽實業股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "1150512",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.11",
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "33",
-            "company": "福懋油脂股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福懋油脂股份有限公司",
             "productName": "益康大豆沙拉油 18L",
             "batchNo": "20270527000408",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.27",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "34",
-            "company": "福懋油脂股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福懋油脂股份有限公司",
             "productName": "益康大豆沙拉油 18L",
             "batchNo": "20270528000408",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.28",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "35",
-            "company": "福懋油脂股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福懋油脂股份有限公司",
             "productName": "益康大豆沙拉油 18KG",
             "batchNo": "20270526000408",
+            "manufactureDate": "—",
             "expiryDate": "2027.05.26",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "36",
-            "company": "福懋油脂股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福懋油脂股份有限公司",
             "productName": "一級黃豆油",
             "batchNo": "202605201313",
+            "manufactureDate": "—",
             "expiryDate": "2026.11.07",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "37",
-            "company": "福懋油脂股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福懋油脂股份有限公司",
             "productName": "一級黃豆油",
             "batchNo": "202605211313",
+            "manufactureDate": "—",
             "expiryDate": "",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "38",
-            "company": "福懋油脂股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福懋油脂股份有限公司",
             "productName": "一級黃豆油",
             "batchNo": "202605221313",
+            "manufactureDate": "—",
             "expiryDate": "",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
       },
       {
             "no": "39",
-            "company": "福懋油脂股份有限公司",
+            "group": "第二批 313-1150512",
+            "brand": "福懋油脂股份有限公司",
             "productName": "一級黃豆油",
             "batchNo": "202605251313",
+            "manufactureDate": "—",
             "expiryDate": "",
-            "status": "同源預防性下架",
-            "source": "115.07.09清冊"
+            "status": "確定超標",
+            "source": "第二批超標｜製表115.07.11"
+      },
+      {
+            "no": "1",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 3L",
+            "batchNo": "C1180526K",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.17",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "2",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 3L",
+            "batchNo": "C1190526K",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.18",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2150526O",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.14",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "4",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2190526O",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.18",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "5",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2190526P",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.18",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "6",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2200526O",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.19",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "7",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2200526P",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.19",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "8",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽大豆沙拉油 18L",
+            "batchNo": "C2210526O",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.20",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "9",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "宏昌香油 3L",
+            "batchNo": "BL200526L",
+            "manufactureDate": "—",
+            "expiryDate": "2028.04.28",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "10",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽健味香油 3L",
+            "batchNo": "BL190526L",
+            "manufactureDate": "—",
+            "expiryDate": "2028.04.28",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "11",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽好味香油 3L",
+            "batchNo": "BL190526L",
+            "manufactureDate": "—",
+            "expiryDate": "2028.04.28",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "12",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽好味香油(業務用)(白) 3L",
+            "batchNo": "BL200526L",
+            "manufactureDate": "—",
+            "expiryDate": "2028.04.28",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "13",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽炸酥油 18L",
+            "batchNo": "BL150526D",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.14",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "14",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽炸酥油 18L",
+            "batchNo": "BL180526D",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.17",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "15",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽炸酥油 18L",
+            "batchNo": "BL190526D",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.18",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "16",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽炸酥油 18L",
+            "batchNo": "BL200526D",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.19",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "17",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "福壽炸酥油 18L",
+            "batchNo": "BL220526D",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.21",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "18",
+            "group": "第三批 315-1150510",
+            "brand": "福壽實業股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "1150510",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.09",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "19",
+            "group": "第三批 315-1150510",
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康大豆沙拉油 18L",
+            "batchNo": "20270521000408",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.21",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "20",
+            "group": "第三批 315-1150510",
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康大豆沙拉油 18L",
+            "batchNo": "20270522000408",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.22",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "21",
+            "group": "第三批 315-1150510",
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康大豆沙拉油 18L",
+            "batchNo": "20270525000408",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.25",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "22",
+            "group": "第三批 315-1150510",
+            "brand": "福懋油脂股份有限公司",
+            "productName": "益康烹調油 18L",
+            "batchNo": "20270522000403",
+            "manufactureDate": "—",
+            "expiryDate": "2027.05.22",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "23",
+            "group": "第三批 315-1150510",
+            "brand": "福懋油脂股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "202605151315",
+            "manufactureDate": "—",
+            "expiryDate": "2026.11.10",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "24",
+            "group": "第三批 315-1150510",
+            "brand": "福懋油脂股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "202605181315",
+            "manufactureDate": "—",
+            "expiryDate": "2026.11.10",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "25",
+            "group": "第三批 315-1150510",
+            "brand": "福懋油脂股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "202605191315",
+            "manufactureDate": "—",
+            "expiryDate": "2026.11.10",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
+      },
+      {
+            "no": "26",
+            "group": "第三批 315-1150510",
+            "brand": "福懋油脂股份有限公司",
+            "productName": "一級黃豆油",
+            "batchNo": "202605191315",
+            "manufactureDate": "—",
+            "expiryDate": "2026.11.10",
+            "status": "確定超標",
+            "source": "第三批超標｜製表115.07.11"
       }
+];
+
+    const taisugarDownstreamData = [
+      {
+            "no": "1",
+            "vendor": "日正食品工業股份有限公司",
+            "address": "臺中市大雅區上山路192號",
+            "item": "台糖大豆沙拉油2L 9X1",
+            "batchNo": "20270525",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "1",
+            "vendor": "日正食品工業股份有限公司",
+            "address": "臺中市大雅區上山路192號",
+            "item": "台糖大豆沙拉油1公升瓶裝 12X1",
+            "batchNo": "20270611",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "1",
+            "vendor": "日正食品工業股份有限公司",
+            "address": "臺中市大雅區上山路192號",
+            "item": "台糖大豆沙拉油2.6L 6X1",
+            "batchNo": "20270702",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "1",
+            "vendor": "日正食品工業股份有限公司",
+            "address": "臺中市大雅區上山路192號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270629",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "2",
+            "vendor": "台灣楓康超市",
+            "address": "臺中市大肚區南榮路59號",
+            "item": "台糖大豆沙拉油2L 9X1",
+            "batchNo": "20270608",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "2",
+            "vendor": "台灣楓康超市",
+            "address": "臺中市大肚區南榮路59號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270628",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "2",
+            "vendor": "台灣楓康超市",
+            "address": "臺中市大肚區南榮路60號",
+            "item": "台糖大豆沙拉油2L 9X1",
+            "batchNo": "20270525",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "2",
+            "vendor": "台灣楓康超市",
+            "address": "臺中市大肚區南榮路60號",
+            "item": "台糖大豆沙拉油2.6L 6X1",
+            "batchNo": "20270525",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "2",
+            "vendor": "台灣楓康超市",
+            "address": "臺中市大肚區南榮路60號",
+            "item": "台糖大豆沙拉油2L 9X1",
+            "batchNo": "20270608",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270526*3558/20270531*114",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油1公升瓶裝 12X1",
+            "batchNo": "20270512",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270531",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270602",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油1公升瓶裝 12X1",
+            "batchNo": "20270520",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油1公升瓶裝 12X1",
+            "batchNo": "20270521",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270609",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油1公升瓶裝 12X1",
+            "batchNo": "20270527",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270614*2190、20270615*186",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270615",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270614*2190/20270615*186",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270622",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油1公升瓶裝 12X1",
+            "batchNo": "20270611",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270706",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "3",
+            "vendor": "全聯台中梧棲物流園區",
+            "address": "臺中市梧棲區港埠路1段237-1號",
+            "item": "台糖大豆沙拉油1公升瓶裝 12X1",
+            "batchNo": "20270616*7632/20270617*3888",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "4",
+            "vendor": "四通食材",
+            "address": "臺中市烏日區溪南路1段680巷526弄36號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270705*13、20270706*107",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "4",
+            "vendor": "四通食材",
+            "address": "臺中市烏日區溪南路1段680巷526弄36號",
+            "item": "台糖烤酥油 18公升 1X1",
+            "batchNo": "20270705",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "4",
+            "vendor": "四通食材",
+            "address": "臺中市烏日區溪南路1段680巷526弄36號",
+            "item": "台糖大豆沙拉油2.6L 6X1",
+            "batchNo": "20270702",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "4",
+            "vendor": "四通食材",
+            "address": "臺中市烏日區溪南路1段680巷526弄36號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270706",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "4",
+            "vendor": "四通食材",
+            "address": "臺中市烏日區溪南路1段680巷526弄36號",
+            "item": "台糖大豆沙拉油(0.6L) 12X1",
+            "batchNo": "20270703",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "5",
+            "vendor": "鼎大盈企業有限公司",
+            "address": "臺中市太平區永平路3段92巷55號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270607",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "5",
+            "vendor": "鼎大盈企業有限公司",
+            "address": "臺中市太平區永平路3段92巷55號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270611",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "5",
+            "vendor": "鼎大盈企業有限公司",
+            "address": "臺中市太平區永平路3段92巷55號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270622",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "5",
+            "vendor": "鼎大盈企業有限公司",
+            "address": "臺中市太平區永平路3段92巷55號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270628",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "6",
+            "vendor": "連興油行",
+            "address": "臺中市西屯區何仁里長安路1段45號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270628",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "6",
+            "vendor": "連興油行",
+            "address": "臺中市西屯區何仁里長安路1段45號",
+            "item": "台糖大豆沙拉油3L 6X1",
+            "batchNo": "20270629",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "7",
+            "vendor": "竹記有限公司",
+            "address": "臺中市東區新庄里大公街43號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270706",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "7",
+            "vendor": "竹記有限公司",
+            "address": "臺中市東區新庄里大公街43號",
+            "item": "台糖烤酥油 18公升 1X1",
+            "batchNo": "20270705",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "8",
+            "vendor": "新富成批發有限公司",
+            "address": "臺中市神岡區中山路360巷10弄2號",
+            "item": "台糖大豆沙拉油2.6L 6X1",
+            "batchNo": "20270603",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "9",
+            "vendor": "永大商行",
+            "address": "臺中市大里區內新里新光路108號1樓",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270624",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "10",
+            "vendor": "和誠實業有限公司",
+            "address": "臺中市豐原區豐田路59號",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270628",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      },
+      {
+            "no": "11",
+            "vendor": "桔瑞",
+            "address": "臺中市北屯區平德路10號2樓",
+            "item": "台糖大豆沙拉油 18公升(黃提把) 1X1",
+            "batchNo": "20270707",
+            "status": "預防性下架",
+            "source": "台糖下游業者名單｜製表115.07.11"
+      }
+];
+
+    const taisugarProductItems = [
+      "台糖大豆沙拉油 0.6公升",
+      "台糖大豆沙拉油 1公升",
+      "台糖大豆沙拉油 2公升",
+      "台糖大豆沙拉油 2.6公升",
+      "台糖大豆沙拉油 3公升",
+      "台糖大豆沙拉油 18公升",
+      "台糖大豆沙拉油 18公斤",
+      "台糖烤酥油 2公升",
+      "台糖烤酥油 18公升"
 ];
 
     const refundList = [
@@ -10328,6 +11144,8 @@
     const productCitySelect = document.getElementById("productCitySelect");
     const productSummary = document.getElementById("productSummary");
     const productTableBody = document.getElementById("productTableBody");
+    const taisugarTableBody = document.getElementById("taisugarTableBody");
+    const taisugarProductList = document.getElementById("taisugarProductList");
     const schoolSummaryGrid = document.getElementById("schoolSummaryGrid");
     const schoolListGrid = document.getElementById("schoolListGrid");
 
@@ -10344,7 +11162,7 @@
     function renderSearchTabs(counts) {
       const tabs = [
         { key: "oil", label: `問題油品 ${counts.oil}`, count: counts.oil },
-        { key: "relatedOil", label: `同源油品 ${counts.relatedOil}`, count: counts.relatedOil },
+        { key: "taisugar", label: `台糖預防性下架 ${counts.taisugar}`, count: counts.taisugar },
         { key: "products", label: `預防性下架產品 ${counts.products}`, count: counts.products },
         { key: "downstream", label: `下游業者 ${counts.downstream}`, count: counts.downstream },
         { key: "schools", label: `影響學校 ${counts.schools}`, count: counts.schools }
@@ -10377,6 +11195,8 @@
 
       const filteredOil = oilItems.filter(item => {
         return [
+          item.no,
+          item.group,
           item.brand,
           item.productName,
           item.batchNo,
@@ -10386,14 +11206,13 @@
           item.source
         ].some(value => String(value).toLowerCase().includes(key));
       });
-
-      const filteredRelatedOil = relatedOilItems.filter(item => {
+      const filteredTaisugar = taisugarDownstreamData.filter(item => {
         return [
           item.no,
-          item.company,
-          item.productName,
+          item.vendor,
+          item.address,
+          item.item,
           item.batchNo,
-          item.expiryDate,
           item.status,
           item.source
         ].some(value => String(value).toLowerCase().includes(key));
@@ -10431,7 +11250,7 @@
 
       const counts = {
         oil: filteredOil.length,
-        relatedOil: filteredRelatedOil.length,
+        taisugar: filteredTaisugar.length,
         products: filteredProducts.length,
         downstream: filteredDownstream.length,
         schools: filteredSchools.length
@@ -10439,9 +11258,9 @@
 
       renderSearchTabs(counts);
 
-      const total = counts.oil + counts.relatedOil + counts.products + counts.downstream + counts.schools;
+      const total = counts.oil + counts.taisugar + counts.products + counts.downstream + counts.schools;
       if (key) {
-        resultCount.textContent = `搜尋結果：問題油品 ${counts.oil} 筆｜同源油品 ${counts.relatedOil} 筆｜預防性下架產品 ${counts.products} 筆｜下游業者 ${counts.downstream} 筆｜影響學校 ${counts.schools} 筆`;
+        resultCount.textContent = `搜尋結果：問題油品 ${counts.oil} 筆｜台糖預防性下架 ${counts.taisugar} 筆｜預防性下架產品 ${counts.products} 筆｜下游業者 ${counts.downstream} 筆｜影響學校 ${counts.schools} 筆`;
       } else {
         resultCount.textContent = `請輸入關鍵字開始查詢，預設不展開列表。`;
       }
@@ -10462,10 +11281,11 @@
       if (activeSearchType === "oil") {
         unifiedSearchHead.innerHTML = `
           <tr>
+            <th>批次</th>
+            <th>序號</th>
             <th>品牌 / 業者</th>
             <th>品名</th>
             <th>批號</th>
-            <th>製造日期</th>
             <th>有效日期</th>
             <th>狀態</th>
             <th>資料來源</th>
@@ -10473,36 +11293,36 @@
         `;
         unifiedSearchBody.innerHTML = filteredOil.map(item => `
           <tr>
+            <td>${item.group}</td>
+            <td>${item.no}</td>
             <td>${item.brand}</td>
             <td>${item.productName}</td>
             <td><strong>${item.batchNo}</strong></td>
-            <td>${item.manufactureDate}</td>
-            <td>${item.expiryDate}</td>
+            <td>${item.expiryDate || "依同列標示"}</td>
             <td><span class="${getStatusTag(item.status)}">${item.status}</span></td>
             <td>${item.source}</td>
           </tr>
         `).join("");
       }
 
-
-      if (activeSearchType === "relatedOil") {
+      if (activeSearchType === "taisugar") {
         unifiedSearchHead.innerHTML = `
           <tr>
             <th>序號</th>
-            <th>公司名稱</th>
-            <th>產品</th>
+            <th>廠商名稱</th>
+            <th>地址</th>
+            <th>品項</th>
             <th>批號</th>
-            <th>有效日期</th>
             <th>狀態</th>
           </tr>
         `;
-        unifiedSearchBody.innerHTML = filteredRelatedOil.map(item => `
+        unifiedSearchBody.innerHTML = filteredTaisugar.map(item => `
           <tr>
             <td>${item.no}</td>
-            <td>${item.company}</td>
-            <td>${item.productName}</td>
+            <td>${item.vendor}</td>
+            <td>${item.address}</td>
+            <td>${item.item}</td>
             <td><strong>${item.batchNo}</strong></td>
-            <td>${item.expiryDate}</td>
             <td><span class="tag tag-orange">${item.status}</span></td>
           </tr>
         `).join("");
@@ -10619,6 +11439,25 @@
         `;
       }).join("");
     }
+
+    function renderTaisugar() {
+      if (taisugarProductList) {
+        taisugarProductList.innerHTML = taisugarProductItems.map(item => `<li>${item}</li>`).join("");
+      }
+      if (taisugarTableBody) {
+        taisugarTableBody.innerHTML = taisugarDownstreamData.map(item => `
+          <tr>
+            <td>${item.no}</td>
+            <td>${item.vendor}</td>
+            <td>${item.address}</td>
+            <td>${item.item}</td>
+            <td><strong>${item.batchNo}</strong></td>
+            <td><span class="tag tag-orange">${item.status}</span></td>
+          </tr>
+        `).join("");
+      }
+    }
+
     function renderProductList(city = "臺中市") {
       if (!productCitySelect || !productTableBody || !productSummary) return;
 
@@ -10731,6 +11570,7 @@
     renderUnifiedSearch();
     renderVendors();
     renderSchools();
+    renderTaisugar();
     renderProductList("臺中市");
     renderDownstream("臺中市");
     renderTimeline();
