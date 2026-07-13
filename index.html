@@ -1354,46 +1354,6 @@
       </div>
     </section>
 
-
-    <section class="section" id="taisugar">
-      <div class="section-head">
-        <div>
-          <h2>台糖預防性下架油品及下游業者</h2>
-          <p>本清冊為台糖相關油品之預防性下架品項及下游業者名單，製表日期為115年7月11日。此區為預防性下架資訊，與已確認超標問題油品分開呈現，正式內容仍以主管機關及業者公告為準。</p>
-        </div>
-      </div>
-
-      <div class="info-grid">
-        <div class="info-card">
-          <strong>台糖 9 項含中聯油脂油品</strong>
-          <ul id="taisugarProductList"></ul>
-        </div>
-        <div class="info-card">
-          <strong>清冊摘要</strong>
-          <p>下游業者共 11 家，明細共 41 筆；可利用上方整合搜尋查詢廠商名稱、地址、品項或批號。</p>
-        </div>
-      </div>
-
-      <div class="table-box">
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>序號</th>
-                <th>廠商名稱</th>
-                <th>地址</th>
-                <th>品項</th>
-                <th>批號</th>
-                <th>狀態</th>
-              </tr>
-            </thead>
-            <tbody id="taisugarTableBody"></tbody>
-          </table>
-        </div>
-      </div>
-      <p class="note">來源：台糖下游業者名單，製表日期 115.07.11。此清冊為預防性下架資料，正式公告與後續異動仍請以官方資料為準。</p>
-    </section>
-
 <section id="product-list">
       <div class="container">
         <div class="section-head">
@@ -11144,8 +11104,6 @@
     const productCitySelect = document.getElementById("productCitySelect");
     const productSummary = document.getElementById("productSummary");
     const productTableBody = document.getElementById("productTableBody");
-    const taisugarTableBody = document.getElementById("taisugarTableBody");
-    const taisugarProductList = document.getElementById("taisugarProductList");
     const schoolSummaryGrid = document.getElementById("schoolSummaryGrid");
     const schoolListGrid = document.getElementById("schoolListGrid");
 
@@ -11439,25 +11397,6 @@
         `;
       }).join("");
     }
-
-    function renderTaisugar() {
-      if (taisugarProductList) {
-        taisugarProductList.innerHTML = taisugarProductItems.map(item => `<li>${item}</li>`).join("");
-      }
-      if (taisugarTableBody) {
-        taisugarTableBody.innerHTML = taisugarDownstreamData.map(item => `
-          <tr>
-            <td>${item.no}</td>
-            <td>${item.vendor}</td>
-            <td>${item.address}</td>
-            <td>${item.item}</td>
-            <td><strong>${item.batchNo}</strong></td>
-            <td><span class="tag tag-orange">${item.status}</span></td>
-          </tr>
-        `).join("");
-      }
-    }
-
     function renderProductList(city = "臺中市") {
       if (!productCitySelect || !productTableBody || !productSummary) return;
 
@@ -11570,7 +11509,6 @@
     renderUnifiedSearch();
     renderVendors();
     renderSchools();
-    renderTaisugar();
     renderProductList("臺中市");
     renderDownstream("臺中市");
     renderTimeline();
